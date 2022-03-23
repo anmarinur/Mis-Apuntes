@@ -140,3 +140,19 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 [Sintaxis para markdown](https://www.markdownguide.org/basic-syntax/)
 
 
+# TERMINAL
+
+- **ls**: (`list`) Nos permite ver el contenido de la carpeta en la que nos encontramos
+- **cd**: (`change directory`) Nos permite movernos a una nueva carpeta o directorio
+: `cd NombreCarpeta`
+- **cd ..**: regresa un nivel de la actual carpeta
+- **cd ~**: *La virgulilla se saca en ubuntu ALT GR + 4*. Nos regresa a la carpeta raiz
+- **mkdir**: (`make directory`) Nos permite crear una nueva carpeta dentro del directorio en donde nos encontramos: `mkdir NombreCarpetaNueva`
+- **touch**: nos permite crear nuevos archivos dentro del directorio en donde nos econtremos. Para esto se agrega el nombre que queremos que tenga y la extensión: `touch NombreArchivo.extension`
+- **rm**: nos permite eliminar cualquier archivo. No funciona con carpetas. Este archivo se elimina ***PERMANENTEMENTE*** y no queda en la papelera.
+- **pwd**: nos indica en qué carpeta nos encontramos
+
+> NOTA: cuando se está escribiendo el nombre de un archivo, se puede escribir la primer letra de ese nombre o las dos primeras y luego se oprime la tecla TAB para que complete, así se ahorra tiempo.
+
+
+
