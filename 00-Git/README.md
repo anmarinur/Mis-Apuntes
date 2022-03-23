@@ -154,5 +154,21 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 
 > NOTA: cuando se está escribiendo el nombre de un archivo, se puede escribir la primer letra de ese nombre o las dos primeras y luego se oprime la tecla TAB para que complete, así se ahorra tiempo.
 
+# GIT-HUB
+
+- **git status**: muestra el estado de los archivos
+- **git add . o git add nombre-del-archivo**: con el punto actualiza todos los archivos modificados o agregados y si no se pone el punto entonces se debe poner el nombre del archivo. De esta forma Git ya sabe que hay algunas modificaciones aunque estas solo están de forma local. Aquellos que estaban como unstage (no rastreado) a staged.
+- **git commit -m ‘#’**: en done # puede tomar cualquier texto que represente el cambio o la actualización realizada. Aquellos archivos untracked (sin seguimiento) pasan a tracked. Y los archivos modificados quedan con un nombre con la versión actual.
+- **git push**: para subir el archivo a github
+- **git clone direccion-url-repositorio**: para clonar un repositorio que se encuentre en GIT
+
+## TIPOS DE ESTADOS DE UN ARCHIVO EN GIT
+
+- **Tracked**: son archivos que ya están en GIT, no tienen cambios pendientes y ya se han guardado sus últimas actualizaciones en el repositorio gracias a git add y git commit
+- **Staged**: son archivos que ya están en GIT gracias a git add, pero no tienen sus últimas actualizaciones. GIT ya sabe de la existencia de modificaciones pero no se han actualizado en el repositorio por lo que necesita de git commit.
+- **Unstaged**: son archivos tracked pero unstaged. No han sido afectados por el comando git add y menos por el comando git commit. Sus últimas versiones se encuentran guardadas localmente.
+- **Untracked**: son archivos que solo existen de forma local. GIT no sabe de su existencia.
+
+
 
 
