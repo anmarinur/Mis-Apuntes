@@ -13,10 +13,13 @@ Se basa en signos (#) que varían el nivel del título dependiendo de la cantida
 
 Ej: El Heading Nivel 1 de este archivo es el título que dice SINTAXIS PARA MARKDOWN (MD)
 
+<br>
 
 ## PÁRRAFOS
 
 Para los párrafos se crea una nueva línea sin dejar espacios al inicio y siempre alineado a la izquierda. Cada párrafo se separa de una línea.
+
+<br>
 
 ## ÉNFASIS EN UN TEXTO
 
@@ -38,6 +41,8 @@ Para poner itálica a una palabra de en medio se usan los asteriscos
 
 Para poner negriella e itálica a una palabra de en medio se usan los asteriscos
 
+<br>
+
 ## BLOCKQUOTES
 
 Para agregarlos se usa > antes del texto. Para poner una línea de espacio cuando son varias se pone > y se deja en blanco
@@ -51,7 +56,6 @@ Y queda así:
 > Soy un blockquote
 >
 > Otro blockquote
-
 
 Si se quiere poner un blockquote dentro de otro, se usa >>
 
@@ -85,6 +89,8 @@ Y queda así:
 
 **Se debe dejar una línea de espacio antes y después del blockquote**
 
+<br>
+
 ## LISTAS
 
 Para listas ordenadas se ponen los números que necesariamente no tienen que estar en orden, pero si deben empezar por el número 1 y luego un punto:
@@ -92,13 +98,11 @@ Para listas ordenadas se ponen los números que necesariamente no tienen que est
     1. Primer ítem
     2. Segundo ítem
     3. Tercer ítem
-        3.1 Un subítem
     4. Cuarto ítem
 
 1. Primer ítem
 2. Segundo ítem
 3. Tercer ítem
-    3.1 Un subítem
 4. Cuarto ítem
 
 Para listas desordenadas se pueden usar símbolos como - + * 
@@ -117,6 +121,8 @@ Para listas desordenadas se pueden usar símbolos como - + *
 
 > No se deben mezclar los símbolos. Se usa en todos el mismo.
 
+<br>
+
 ## IMÁGENES
 
 Primero se añade un signo de admiración (!), después un texto alternativo entre llaves [] y luego entre paréntesis la ruta de la imagen:
@@ -124,6 +130,8 @@ Primero se añade un signo de admiración (!), después un texto alternativo ent
     ![Dibujo de spiderman](/Images/spidey1.jpg "Spidey") 
 
 ![Dibujo de spiderman](/Images/spidey1.jpg "Spidey") 
+
+<br>
 
 ## LINKS
 
@@ -139,6 +147,8 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 
 [Sintaxis para markdown](https://www.markdownguide.org/basic-syntax/)
 
+<br>
+<br>
 
 # TERMINAL
 
@@ -153,6 +163,9 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 - **pwd**: nos indica en qué carpeta nos encontramos
 
 > NOTA: cuando se está escribiendo el nombre de un archivo, se puede escribir la primer letra de ese nombre o las dos primeras y luego se oprime la tecla TAB para que complete, así se ahorra tiempo.
+
+<br>
+<br>
 
 # GIT-HUB
 
