@@ -162,6 +162,10 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 - **git push**: para subir el archivo a github
 - **git clone direccion-url-repositorio**: para clonar un repositorio que se encuentre en GIT
 
+> Para actualizar el token en una carpeta nueva en la que se clonó un repositorio, se debe ir a ese directorio primero usando `cd` y luego se usa el siguiente código reemplazando con la información correspondiente:
+>
+>> `git remote set-url origin https://username:token@github.com/username/repository.git`
+
 ## TIPOS DE ESTADOS DE UN ARCHIVO EN GIT
 
 - **Tracked**: son archivos que ya están en GIT, no tienen cambios pendientes y ya se han guardado sus últimas actualizaciones en el repositorio gracias a git add y git commit
