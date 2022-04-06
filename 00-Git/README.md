@@ -156,7 +156,7 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 - **cd**: (`change directory`) Nos permite movernos a una nueva carpeta o directorio
 : `cd NombreCarpeta`
 - **cd ..**: regresa un nivel de la actual carpeta
-- **cd ~**: *La virgulilla se saca en ubuntu ALT GR + 4*. Nos regresa a la carpeta raiz
+- **cd ~**: *La virgulilla se saca en ubuntu ALT GR + 4(El que está encima de las letras con el signo $)*. Nos regresa a la carpeta raiz
 - **mkdir**: (`make directory`) Nos permite crear una nueva carpeta dentro del directorio en donde nos encontramos: `mkdir NombreCarpetaNueva`
 - **touch**: nos permite crear nuevos archivos dentro del directorio en donde nos econtremos. Para esto se agrega el nombre que queremos que tenga y la extensión: `touch NombreArchivo.extension`
 - **rm**: nos permite eliminar cualquier archivo. No funciona con carpetas. Este archivo se elimina ***PERMANENTEMENTE*** y no queda en la papelera.

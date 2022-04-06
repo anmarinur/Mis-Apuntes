@@ -5,22 +5,59 @@
   <title>Apuntes de HTML</title>
 </head>
 <body>
-  <h1>HTML</h1>
-  <p>HTML signfica Lenguaje de Marcas de Hipertexto</p>
+  <header>
+    <h1>HTML <i>Soy un header h1</i></h1>
+    <p>HTML signfica Lenguaje de Marcas de Hipertexto</p>
+    <br>
+  </header>
+  
+  <main>
 
-  <h2>ESTRUCTURA DEL HTML</h2>
+    <section>
+      <h2>ESTRUCTURA DEL HTML</h2>
+      <p>Un documento HTML siempre va a manejar esta estructura:</p>
 
-  <p>Un documento HTML siempre va a manejar esta estructura:</p>
+      <i><pre>
+        &lt;html&gt; <!--<html>-->
+          &lt;head&gt; <!--<head>-->
+          &lt;/head&gt; <!--</head>-->
+          
+          &lt;body&gt; <!--<body>-->
+          &lt;/body&gt; <!-- </body>-->
+        &lt;/html&gt; <!--</html>-->
+      </pre></i>
 
-  <pre>
-    &lt;html&gt;<br>
-      &lt;head&gt;<br>
-      &lt;/head&gt;<br>
+      <p>En donde el <i>&lt;head&gt;</i> <!--<head>--> contiene información importante para el navegador y el <i>&lt;body&gt;</i> <!--<body>--> contiene información importante para el usuario</p>
+      <br>
+    </section>
 
-      &lt;body&gt;<br>
-      &lt;/body&gt;<br>
-    &lt;/html&gt;<br>
-  </pre>
+    <section>
+      <h2>HEADINGS h1 - h6</h2>
+      <p><i>h1</i> es la más importante y es la que más va a tener en cuenta el navegador. No necesariamente debe ser más grande que los demás. <i>h1</i> se utiliza solo una vez por archivo html, las demás si se pueden repetir.</p>
+      <p>Los headings no se eligen por el tamaño sino por la importancia y el orden jerárquico que se les quiera dar. Los tamaños se cambian con CSS.</p>
+      <p>Usualmente se usa h1, h2 y h3. De ahí para abajo ya se puede usar &lt;p&gt;</p>
+      <br>
+      <p>Ejemplos:</p>
+      <br>
+      <b><p>Ejemplo de h1 en el título de esta página</p></b>
+      <h2>Soy un h2</h2>
+      <h3>Soy un h3</h3>
+      <h4>Soy un h4</h4>
+      <h5>Soy un h5</h5>
+      <h6>Soy un h6</h6>
+      <br>
+    </section>
+  </main>
+
+  <section>
+    <h2>NOTAS</h2>
+    <ul>
+      <li>Los comentarios en HTML se escriben así <i>&lt;!-- --&gt;</i></li>
+      <li>HTML no es un lenguaje de programación</li>
+      <li>El archivo principal suele llamarse index.html</li>
+      <li>En VSC la tecla <i>! + ENTER</i> saca una estructura básica de HTML</li>
+    </ul>
+  </section>
 
   
 </body>
