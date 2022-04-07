@@ -1,3 +1,10 @@
+// JAVASCRIPT
+
+// Para nombrar los archivos como buena práctica se les nombra con el snake_case
+// Ej: mi_archivo_javascript.js
+
+// --------------------------------------------------------------------------
+
 /* 
 JavaScript tiene disponible 8 tipos de datos:
 
@@ -46,7 +53,7 @@ const varSymbol2 = Symbol('varSymbol');
 
 // --------------------------------------------------------------------------
 
-// Una variable puede tomar los 8 tipos de datos. El nombre de una variable puede contener letras y números y ($) o (_), pero nunca puede empezar por un número
+// Una variable puede tomar los 8 tipos de datos. El nombre de una variable puede contener letras, números y ($) o (_) incluso comenzar por ellos a excepción de los números, nunca puede empezar por un número
 
 // Para asignar valores a una variable se usa (=)
 // También se pueden asignar una variable a otra variable
@@ -55,6 +62,32 @@ varString = varNumber;
 
 // Los nombres de las variables y las funciones son sensibles a las mayúsculas
 // Por ejemplo myVar es diferente de myvar y diferente de MYVAR
+// Como buena práctica se utiliza el camelCase que consiste en poner la primer letra de las palabras aparte de la primera
+// en mayúscula
+
+var esteEsElCamelCase;
+
+// Para las constantes se recomienda el UPPER_CASE:
+
+const UNA_CONSTANTE = 'Soy una constante';
+
+// DIFERENCIA ENTRE VAR Y LET
+
+// Con var es muy fácil sobreescribir una declaración de variable:
+
+var varNumber2 = 20;
+var varNumber2 = 55;
+// console.log(varNumber2);
+
+// Cuando el código es pequeño, esto no representa un problema, pero entre más grande más son las probabilidades
+// de que se sobrescriba por accidente.
+// Para eso el ES6 (ECMAScript 6) introdujo la keyword let, así si se quiere sobreescribir, esto arrojaría error:
+
+// let letNumber = 30;
+// let letNumber = 20; --> esto arroja error
+
+// De esta forma con let la variable solo puede ser declarada una vez
+
 
 
 
