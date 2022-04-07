@@ -30,23 +30,23 @@ var varUndefined;
 
 //console.log('hola ' + varUndefined);
 
-var varNull = null;
-var varBoolean = true;
-var varString = 'Anderson';
-var varNumber = 45;
-var varObject = {};
+let varNull = null;
+let varBoolean = true;
+let varString = 'Anderson';
+let varNumber = 45;
+let varObject = {};
 
 // DATOS TIPO SYMBOL
 
 // Permiten obtener valores que no pueden volver a ser creados, es decir, son identificadores únicos
 // Para crear un tipo Symbol se hace de la siguiente forma:
 
-const varSymbol = Symbol('varSymbol');
+let varSymbol = Symbol('varSymbol');
 // console.log(varSymbol);
 
 // Incluso si creo otro symbol del mismo valor, no va a ser igual al anterior
 
-const varSymbol2 = Symbol('varSymbol');
+let varSymbol2 = Symbol('varSymbol');
 
 // varSymbol === varSymbol2 es false
 // console.log(varSymbol === varSymbol2);
@@ -65,7 +65,7 @@ varString = varNumber;
 // Como buena práctica se utiliza el camelCase que consiste en poner la primer letra de las palabras aparte de la primera
 // en mayúscula
 
-var esteEsElCamelCase;
+let esteEsElCamelCase;
 
 // Para las constantes se recomienda el UPPER_CASE:
 
@@ -83,7 +83,7 @@ var varNumber2 = 55;
 // de que se sobrescriba por accidente.
 // Para eso el ES6 (ECMAScript 6) introdujo la keyword let, así si se quiere sobreescribir, esto arrojaría error:
 
-// let letNumber = 30;
+let letNumber = 30;
 // let letNumber = 20; --> esto arroja error
 
 // De esta forma con let la variable solo puede ser declarada una vez
