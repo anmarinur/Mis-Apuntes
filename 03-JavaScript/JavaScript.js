@@ -127,7 +127,8 @@ i /= 5;
 
 // Se definen con las comillas dobles o sencillas
 
-varString = 'Soy un string';
+varString = `Soy un string ${i}`; // Investigar esta forma de definir un string
+console.log(varString);
 
 // Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
 
