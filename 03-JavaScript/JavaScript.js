@@ -3,7 +3,7 @@
 // Para nombrar los archivos como buena práctica se les nombra con el snake_case
 // Ej: mi_archivo_javascript.js
 
-// --------------------------------------------------------------------------
+// *******************************************************************************
 
 /* 
 JavaScript tiene disponible 8 tipos de datos:
@@ -51,7 +51,7 @@ let varSymbol2 = Symbol('varSymbol');
 // varSymbol === varSymbol2 es false
 // console.log(varSymbol === varSymbol2);
 
-// --------------------------------------------------------------------------
+// *******************************************************************
 
 // Una variable puede tomar los 8 tipos de datos. El nombre de una variable puede contener letras, números y ($) o (_) incluso comenzar por ellos a excepción de los números, nunca puede empezar por un número
 
@@ -88,9 +88,51 @@ let letNumber = 30;
 
 // De esta forma con let la variable solo puede ser declarada una vez
 
+// *******************************************************************************
+
+// OPERADORES 
+
+// + Suma
+// - Resta
+// * Multiplicación
+// / División
+// % Módulo --> Devuelve el resto de una división
+
+let i = 0;
 
 
+// Es lo mismo
 
+i = i + 1;
+i++;
+
+i = i - 1;
+i--;
+
+i = i + 5;
+i += 5;
+
+i = i - 5;
+i -= 5;
+
+i = i * 5;
+i *= 5;
+
+i = i / 5;
+i /= 5;
+
+// *******************************************************************************
+
+// STRINGS
+
+// Se definen con las comillas dobles o sencillas
+
+varString = 'Soy un string';
+
+// Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
+
+varString = 'Soy un \'String\'.';
+// console.log(varString);
 
 
 
