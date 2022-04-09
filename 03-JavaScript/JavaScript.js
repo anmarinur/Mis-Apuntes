@@ -32,7 +32,7 @@ var varUndefined;
 
 let varNull = null;
 let varBoolean = true;
-let varString = 'Anderson';
+let varString = "Anderson";
 let varNumber = 45;
 let varObject = {};
 
@@ -41,12 +41,12 @@ let varObject = {};
 // Permiten obtener valores que no pueden volver a ser creados, es decir, son identificadores únicos
 // Para crear un tipo Symbol se hace de la siguiente forma:
 
-let varSymbol = Symbol('varSymbol');
+let varSymbol = Symbol("varSymbol");
 // console.log(varSymbol);
 
 // Incluso si creo otro symbol del mismo valor, no va a ser igual al anterior
 
-let varSymbol2 = Symbol('varSymbol');
+let varSymbol2 = Symbol("varSymbol");
 
 // varSymbol === varSymbol2 es false
 // console.log(varSymbol === varSymbol2);
@@ -69,7 +69,7 @@ let esteEsElCamelCase;
 
 // Para las constantes se recomienda el UPPER_CASE:
 
-const UNA_CONSTANTE = 'Soy una constante';
+const UNA_CONSTANTE = "Soy una constante";
 
 // DIFERENCIA ENTRE VAR Y LET
 
@@ -125,15 +125,55 @@ i /= 5;
 
 // STRINGS
 
-// Se definen con las comillas dobles o sencillas
+// Se definen con las comillas dobles o sencillas, JS acepta cualquiera de las dos, siempre y cuando 
+// se empiece y se termine con las misma:
+
+'Hola' === "Hola"
+
+// Toca decidir cual tipo de comillas usar cuando se van a trabajar con las dos en el mismo string
 
 varString = `Soy un string ${i}`; // Investigar esta forma de definir un string
-console.log(varString);
 
 // Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
 
-varString = 'Soy un \'String\'.';
+varString = "Soy un \"String\".";
 // console.log(varString);
+
+// El backslash (\) no solamente se usa para poner comillas dentro de otras comillas
+// También se usan con otros caracteres
+
+/*
+\' single quote
+\" double quote
+\\ backslash
+\n newline
+\r carriage return
+\t tab
+\b word boundary
+\f form feed
+*/
+
+// Para concatenar dos estrings se puse hacer con el operador (+)
+
+varString = "Anderson" + " Marín";
+
+// También se puede usar el +=
+
+varString += " Uribe";
+
+// también se pueden agregar variables a la concatenación con el (+)
+
+let miNombre = "Anderson";
+varString = "Mi nombre es " + miNombre; // También permite trabajar con +=
+
+// Para ver el tamaño de un string se usa el método .length
+
+varNumber = miNombre.length;
+
+// Para acceder a una posición específica de un string, se puede usar la bracket notation []
+
+varString = "";
+varString = miNombre[0];
 
 
 
