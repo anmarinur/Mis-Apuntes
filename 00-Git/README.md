@@ -164,6 +164,11 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 
 > NOTA: cuando se está escribiendo el nombre de un archivo, se puede escribir la primer letra de ese nombre o las dos primeras y luego se oprime la tecla TAB para que complete, así se ahorra tiempo.
 
+## Líneas de comandos 
+
+- cat *.VOB > movie.vob: Para unir videos
+
+
 <br>
 <br>
 
