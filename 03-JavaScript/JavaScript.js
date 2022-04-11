@@ -23,6 +23,7 @@ let varUndefined;
 //console.log(varUndefined);
 
 // Si se realiza una operación con un valor undefined, voy a tener un resultado NaN (Not a Number)
+// NaN también se obtiene cuando se realizan operaciones con otros datos diferentes a un número
 
 //console.log(5 + varUndefined);
 
