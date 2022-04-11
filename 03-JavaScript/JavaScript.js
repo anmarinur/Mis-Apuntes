@@ -19,7 +19,7 @@ JavaScript tiene disponible 8 tipos de datos:
 */
 
 // Si no se define inicialmente la variable, esta tiene un valor undefined 
-var varUndefined;
+let varUndefined;
 //console.log(varUndefined);
 
 // Si se realiza una operación con un valor undefined, voy a tener un resultado NaN (Not a Number)
@@ -30,11 +30,18 @@ var varUndefined;
 
 //console.log('hola ' + varUndefined);
 
-let varNull = null;
+let varNull = null; // La diferencia con undefined es que el null es intencional
 let varBoolean = true;
 let varString = "Anderson";
 let varNumber = 45;
 let varObject = {};
+
+// DATOS TIPO BOOLEAN
+
+// Existen dos tipos true y false. Los distos tipos de datos tambien tienden al uno o al otro
+// Por ejemplo una variable con valor 0 o un string vacio son falsos mientras que una variable
+// con cualquier valor o un string así sea con solo un espacio " " son positivos
+// En MDN están las listas de los objetos que tienen a ser positivos (Truthy) o negativos (Falsy)
 
 // DATOS TIPO SYMBOL
 
@@ -132,7 +139,13 @@ i /= 5;
 
 // Toca decidir cual tipo de comillas usar cuando se van a trabajar con las dos en el mismo string
 
-varString = `Soy un string ${i}`; // Investigar esta forma de definir un string
+// Cuando se requieren concatenar varios string, contenidos en variables se pueden usar los Template strings
+// Para esto se usa la tilde invertida (`) y las variables se ponen entre llaves precedidas por $
+
+let nombre = "Anderson";
+let apellido = "Marín"
+varString = `Mi nombre es ${nombre} ${apellido}`; // Investigar esta forma de definir un String
+console.log(varString);
 
 // Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
 
@@ -175,10 +188,77 @@ varNumber = miNombre.length;
 varString = "";
 varString = miNombre[0];
 
+// Los datos individuales de un string son inmutables, es decir, una vez creados no se pueden editar
 
+// ARRAYS
 
+// Sirven para almacenar varios datos
 
+varArray = ["uno", "dos", "tres", "cuatro"];
 
+// También se pueden almacenar arrays dentro de un array, se llaman multidimentional arrays
 
+varArray = [["Uno", 1], ["dos", 2]];
 
+// Para acceder a los datos de un array se usa el sistema bracket notation y el primer dato está en la posición 0
 
+varArray = ["uno", "dos", "tres", "cuatro"];
+//console.log(varArray[1]);
+
+// A diferencia de los strings, en los arrays si se pueden modificar los datos incluso si se declaró como constante
+
+const constArray = [25, 15, 30];
+constArray[0] = 50;
+// console.log(constArray);
+
+// Una forma para acceder a los datos de un multidimensional array es con el sistema de brackets
+
+varArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14]
+];
+
+// console.log(varArray[3]); // Va a ser igual a [[10, 11, 12], 13, 14]
+// console.log(varArray[3][0]); // Va a ser igual a [10, 11, 12]
+// console.log(varArray[3][0][1]); // Va a ser igual a 11
+
+// Una forma de añadir elementos a un array es con la función .push() la cual añade el o los elementos 
+// al final del array y entrega el array resultante
+
+varArray = [5, 8, 9];
+varArray.push(2);
+// console.log(varArray);
+
+varArray.push(5 , 6);
+// console.log(varArray);
+
+varArray.push([1, 2, 3]);
+// console.log(varArray);
+
+// Para eliminar el último elemento de un array se utiliza la función .pop() la cual elimina el último 
+// valor y lo retorna pudiéndose guardar en una variable
+
+varString = varArray.pop();
+// console.log(varString);
+
+varArray.pop();
+// console.log(varArray);
+
+// Si se quiere remover no el último valor del array sino el primero, entonces se usa la función
+// .shift();
+
+varNumber = varArray.shift();
+// console.log(varNumber);
+
+varArray.shift();
+// console.log(varArray);
+
+// Y para añadir elementos al inicio del array existe .unshift() que trabaja igual que .push()
+
+varArray.unshift(20);
+// console.log(varArray);
+
+varArray.unshift(50, 100);
+// console.log(varArray);
