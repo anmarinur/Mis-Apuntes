@@ -191,6 +191,8 @@ varString = miNombre[0];
 
 // Los datos individuales de un string son inmutables, es decir, una vez creados no se pueden editar
 
+// *******************************************************************************
+
 // ARRAYS
 
 // Sirven para almacenar varios datos
@@ -264,12 +266,30 @@ varArray.unshift(20);
 varArray.unshift(50, 100);
 // console.log(varArray);
 
+// .of permite crear un arreglo
+varArray = Array.of("a", "b", 1, 2);
+// console.log(varArray);
+
+// .fill podemos llenar un array Arrat(# de posiciones).fill(valor a llenar)
+varArray = Array(10).fill(true);
+console.log(varArray);
+
+// *******************************************************************************
+
 // FUNCTIONS
 
 // Es código reutilizable:
 
 function Saludo() {
   console.log("Hello");
+}
+
+// Hay dos tipos, funciones declaradas y funciones expresadas:
+
+// Función declarada
+
+function funcionDeclarada() {
+  console.log("Soy una función declarada");
 }
 
 // Todo el código dentro de las llaves se ejecuta cuando se invoca la función.
@@ -287,6 +307,16 @@ function testFun(param1, param2) {
 
 // testFun("Hello", "World");
 
+// Si se llama la función sin definirle los parámetros, este los va a tomar como undefined
+// Para solucionar esto, se pueden definir valores por defecto, tan solo igualando en la función el parámetro
+// al dato que queremos sea por defecto
+
+function paramPreDefinidos(nombre = "Desconocido", apellido = "Desconocido") {
+  console.log(`Mi nombre es ${nombre} ${apellido}`)
+}
+
+// paramPreDefinidos();
+
 // Si se quiere devolver un valor desde la función se utiliza return
 
 function plusThree(num) {
@@ -295,6 +325,17 @@ function plusThree(num) {
 
 const answer = plusThree(5);
 // console.log(answer);
+
+// NOTA: Se debe tener en cuenta que la función se ejecuta hasta el return, de ahí en adelante no lo tendría en cuenta
+
+function otraFuncion() {
+  console.log(10);
+  console.log(20);
+  return "Hasta aquí llega";
+  console.log(40);  // Incluso se pone de un color más claro
+}
+
+// otraFuncion();
 
 // SCOPE
 
@@ -312,6 +353,56 @@ function myTest() {
   console.log(loc);
 }
 
-myTest();
+// myTest();
 // console.log(loc); // Sale error porque loc está definida dentro de la función
 
+// Es posible tener dos variables una con scope local y otra con scope global, las dos con el mismo nombre.
+// Esto debido a que la variable local tiene prioridad sobre la global
+
+const someVar = "Hat";
+
+function myFun() {
+  const someVar = "Head";
+  return someVar;
+}
+
+// console.log(myFun()); // Va a imprimir "Head" ya que la variable local tiene prioridad sobre la global
+
+// Las funciones no necesariamente deben usar el return. Este solo se usa si se quiere retornar algún dato
+
+let sum = 0;
+
+function addSum(num) {
+  sum = sum + num;
+}
+
+addSum(3);
+
+// console.log(sum);
+
+// También es posible asignar a una variable el valor retornado de una función
+
+// Tomando la función creada en líneas arriba plusThree(num);
+
+varNumber = 0;
+varNumber = plusThree(5);
+// console.log(varNumber);
+
+// La función y la invocación de esta función pueden ir en cualquier posición ya que JavaScript lo que
+// hace es organizar primero las variables y funciones
+
+// HolaMundo();
+
+function HolaMundo() {
+  console.log("Hola Mundo");
+}
+
+// Funciones expresadas (funciones anónimas)
+
+// Es una función que se le a asignado a una variable
+
+const funcionExpresada = function() {
+  console.log("Esto es una función expresada");
+}
+
+// En este tipo de funciones si se invoca antes de ser expresada, JavaScript va a arrojar un error
