@@ -146,7 +146,7 @@ i /= 5;
 let nombre = "Anderson";
 let apellido = "Marín"
 varString = `Mi nombre es ${nombre} ${apellido}`; // Investigar esta forma de definir un String
-console.log(varString);
+// console.log(varString);
 
 // Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
 
@@ -263,3 +263,55 @@ varArray.unshift(20);
 
 varArray.unshift(50, 100);
 // console.log(varArray);
+
+// FUNCTIONS
+
+// Es código reutilizable:
+
+function Saludo() {
+  console.log("Hello");
+}
+
+// Todo el código dentro de las llaves se ejecuta cuando se invoca la función.
+// Para invocar la función se escribe el nombre de esta seguido de paréntesis:
+
+// Saludo();
+
+// También se puede crear una función que requiera algunos datos que se le deben dar al invocar la función
+// Estos dátos que pide la función se llaman parámetros y cuando se le dan los parámetros a la función
+// cuando esta se invoca, se llaman argumentos
+
+function testFun(param1, param2) {  
+  console.log(param1, param2);
+}
+
+// testFun("Hello", "World");
+
+// Si se quiere devolver un valor desde la función se utiliza return
+
+function plusThree(num) {
+  return num + 3;
+}
+
+const answer = plusThree(5);
+// console.log(answer);
+
+// SCOPE
+
+// El scope de una variable es la visibilidad que esta tiene en el código.
+
+// Por ejemplo las variables declaradas fuera de una función de bloque, tienen scope Global, es decir,
+// se pueden en todo el programa. Las variables declaradas sin let o const tienen automáticamente scope global.
+// Esto puede generar consecuencias inesperadas durante la ejecución del código. Por lo tanto siempre se debe crear una
+// variable con let o const
+
+// Las variables declaradas dentro de una función tienen un scope local
+
+function myTest() {
+  const loc = "foo";
+  console.log(loc);
+}
+
+myTest();
+// console.log(loc); // Sale error porque loc está definida dentro de la función
+
