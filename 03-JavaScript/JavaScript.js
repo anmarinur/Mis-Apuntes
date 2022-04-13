@@ -106,6 +106,12 @@ let letNumber = 30;
 
 let i = 0;
 
+i = 5 + 2;
+i = 5 - 2;
+i = 5 * 2;
+i = 5 / 2;
+i = 5 % 2;
+//console.log(i);
 
 // Es lo mismo
 
@@ -127,6 +133,45 @@ i *= 5;
 i = i / 5;
 i /= 5;
 
+// OPERADORES RELACIONALES 
+
+// <, >, <=, >=
+// Comparan valores ya sea mayor, menor, mayor o igual, menor o igual
+// De igual forma que (==) comparan valores así sean de distintos tipos de datos como: "3" < 5 lo que sería true
+// console.log(9 > 8); // True
+// console.log(9 < 8); // False
+// console.log(9 <= 8);  // False
+// console.log(9 >= 8);  // True
+
+// =
+// 1 igual es asignación de lo de la derecha a lo que está a la izquierda
+
+// ==
+// 2 iguales es comparación de valores
+// Usar 2 iguales se considera una mala práctica
+// console.log(7 == 7);  // True
+// console.log("7" == 7);  // True, aunque uno sea un string y el otro un número
+
+// ===
+// 3 iguales es comparación de tipo de dato y valores
+// Por buenas prácticas de programación, este tipo de comparación es la que se debe usar
+// console.log(7 === 7);  // True
+// console.log("7" === 7);  // False
+
+// !=
+// !==
+// Se comportan igual que == y === pero de opustos
+
+// OPERADORES LÓGICOS
+
+// ! (NOT)
+// || (OR)
+// && (AND)
+
+// console.log(!false);
+// console.log(8 < 9 || 9 < 8);
+// console.log(8 < 9 && 8 <= 8); 
+
 // *******************************************************************************
 
 // STRINGS
@@ -139,7 +184,7 @@ i /= 5;
 // Toca decidir cual tipo de comillas usar cuando se van a trabajar con las dos en el mismo string
 
 // Cuando se requieren concatenar varios string, contenidos en variables se pueden usar los Template strings
-// Para esto se usa la tilde invertida (`) y las variables se ponen entre llaves precedidas por $
+// Para esto se usa la tilde invertida (`) y las variables se ponen entre llaves (curly braces) precedidas por $
 
 let nombre = "Anderson";
 let apellido = "Marín"
@@ -270,7 +315,7 @@ varArray = Array.of("a", "b", 1, 2);
 
 // .fill podemos llenar un array Arrat(# de posiciones).fill(valor a llenar)
 varArray = Array(10).fill(true);
-console.log(varArray);
+// console.log(varArray);
 
 // *******************************************************************************
 
@@ -404,3 +449,83 @@ const funcionExpresada = function() {
 }
 
 // En este tipo de funciones si se invoca antes de ser expresada, JavaScript va a arrojar un error
+
+// *******************************************************************************
+
+// OBJETOS
+
+// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa. Se definen usando las llaves { }.
+// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto. A esta información se le llama atributo. Cuando esta información es una función, ya no se llama atributo sino método:
+
+const ObjetoNuevo = {};
+// console.log(ObjetoNuevo);
+
+const Anderson = {
+  nombre: "Anderson",
+  apellido: "Marín",
+  edad: 33,
+  pasatiempos: ["leer", "ver series", "dibujar", "ciclismo"],
+  soltero: true,
+  contacto: {
+    email: "andersonmarindev@gmail.com",
+    nick: ["anmarinur", "anmarinur_dev"]
+  },
+  saludar: function() {
+    console.log(`Hola ${nombre}`);
+  },
+  imprimir: function() {
+    console.log(`Este es mi nick @${this.contacto.nick[0]}`);
+  }
+}
+// console.log(Anderson);
+
+// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se va a acceder a una función
+// se le debe poner paréntesis al final del nombre
+
+// console.log(Anderson["contacto"]);  // No tan usada
+// console.log(Anderson.apellido);
+// console.log(Anderson.pasatiempos[1]);
+// console.log(Anderson.contacto.nick[0]);
+// Anderson.saludar();
+// Anderson.imprimir();
+
+// Con el método .keys que es un objeto global se crea un arreglo iterable con todos las claves (keys) del objeto
+varString = Object.keys(Anderson);
+// console.log(varString); 
+
+// Con el método .values que es un objeto global se crea un arreglo iterable con todos los valores (values) del objeto
+varString = Object.values(Anderson);
+// console.log(varString);
+
+// Con este método puedo saber si un objeto tiene una propiedad
+varBoolean = Anderson.hasOwnProperty("nombre");
+// console.log(varBoolean);
+
+varBoolean = Anderson.hasOwnProperty("date");
+// console.log(varBoolean);
+
+// *******************************************************************************
+
+// CONDICIONALES
+
+// IF, ELSE IF, ELSE
+// El if es usado para tomar decisiones en el código. Si la condición es verdadera (true) se va a ejecutar lo que esté entre las 
+// llaves (curly braces).
+
+/* 
+La estructura de un if es así:
+
+if (condición) {
+  código a ejecutar;
+}
+*/
+
+function test (myCondition) {
+  if (myCondition) {
+    console.log("It was true");
+  }
+  console.log("It was false");
+}
+
+test(true);
+test(false);
