@@ -59,8 +59,6 @@ let varSymbol2 = Symbol("varSymbol");
 // varSymbol === varSymbol2 es false
 // console.log(varSymbol === varSymbol2);
 
-// *******************************************************************
-
 // Una variable puede tomar los 8 tipos de datos. El nombre de una variable puede contener letras, números y ($) o (_) incluso comenzar por ellos a excepción de los números, nunca puede empezar por un número
 
 // Para asignar valores a una variable se usa (=)
