@@ -524,8 +524,65 @@ function test (myCondition) {
   if (myCondition) {
     console.log("It was true");
   }
-  console.log("It was false");
 }
 
-test(true);
-test(false);
+// test(true);
+// test(false);
+
+// ELSE
+
+// Es usado para poder ejecutar una función cuando la condición del if es falsa
+
+/* 
+if (condición) {
+  código a ejecutar;
+} else {
+  código a ejecutar;
+}
+*/
+
+function testElse(numero) {
+  if(numero > 10) {
+    console.log("El número es mayor que 10");
+  } else {
+    console.log("El número es menor o igual a 10")
+  }
+}
+
+testElse(5);
+testElse(15);
+
+// ELSE IF
+
+// Esta declaración se usa cuando se tienen múltiples combinaciones
+
+/*
+if (condición 1) {
+  código a ejecutar;
+} else if (condición 2) {
+  código a ejecutar;
+} else if (condición 3) {
+  código a ejecutar;
+} else {
+  código a ejecutar
+}
+*/
+
+function testElseIf(numero) {
+  if(numero > 10) {
+    console.log("El número es mayor que 10");
+  } else if (numero === 10) {
+    console.log("El número es igual a 10")
+  } else {
+    console.log("El número es menor que 10");
+  }
+}
+
+testElseIf(5);
+testElseIf(10);
+testElseIf(15);
+
+// NOTA
+// Cuando hay múltiples condiciones estas se evalúan de arriba hacia abajo. Por esto se debe ser muy cuidadoso a la hora de ubicar las 
+// condiciones, ya que se pueden tener resultados no esperados
+
