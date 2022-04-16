@@ -4,6 +4,7 @@
 // Ej: mi_archivo_javascript.js
 
 // *******************************************************************************
+// *******************************************************************************
 
 /* 
 JavaScript tiene disponible 8 tipos de datos:
@@ -94,6 +95,8 @@ let letNumber = 30;
 
 // De esta forma con let la variable solo puede ser declarada una vez
 
+
+// *******************************************************************************
 // *******************************************************************************
 
 // OPERADORES 
@@ -172,6 +175,8 @@ i /= 5;
 // console.log(8 < 9 || 9 < 8);
 // console.log(8 < 9 && 8 <= 8); 
 
+
+// *******************************************************************************
 // *******************************************************************************
 
 // STRINGS
@@ -234,6 +239,8 @@ varString = miNombre[0];
 
 // Los datos individuales de un string son inmutables, es decir, una vez creados no se pueden editar
 
+
+// *******************************************************************************
 // *******************************************************************************
 
 // ARRAYS
@@ -317,6 +324,8 @@ varArray = Array.of("a", "b", 1, 2);
 varArray = Array(10).fill(true);
 // console.log(varArray);
 
+
+// *******************************************************************************
 // *******************************************************************************
 
 // FUNCTIONS
@@ -450,6 +459,8 @@ const funcionExpresada = function() {
 
 // En este tipo de funciones si se invoca antes de ser expresada, JavaScript va a arrojar un error
 
+
+// *******************************************************************************
 // *******************************************************************************
 
 // OBJETOS
@@ -504,6 +515,7 @@ varBoolean = Anderson.hasOwnProperty("nombre");
 varBoolean = Anderson.hasOwnProperty("date");
 // console.log(varBoolean);
 
+
 // *******************************************************************************
 
 // CONDICIONALES
@@ -549,8 +561,8 @@ function testElse(numero) {
   }
 }
 
-testElse(5);
-testElse(15);
+// testElse(5);
+// testElse(15);
 
 // ELSE IF
 
@@ -578,11 +590,160 @@ function testElseIf(numero) {
   }
 }
 
-testElseIf(5);
-testElseIf(10);
-testElseIf(15);
+// testElseIf(5);
+// testElseIf(10);
+// testElseIf(15);
 
 // NOTA
 // Cuando hay múltiples condiciones estas se evalúan de arriba hacia abajo. Por esto se debe ser muy cuidadoso a la hora de ubicar las 
 // condiciones, ya que se pueden tener resultados no esperados
+
+// Dentro de una función se puede poner el if como se ha hecho anteriormente, pero también se puede poner directamente en el return de
+// función la comparación y este regresará un valor booleano dependiendo de la condición
+
+// console.log(1 === 3);
+// console.log(2 === 2);
+
+/* 
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Quedaría así: 
+
+function isEqual(a, b) {
+  return a === b;
+} 
+*/
+
+
+// *******************************************************************************
+// *******************************************************************************
+
+// SWITCH, CASE, BREAK
+
+// Switch se usa cuando se tienen múltiples opciones para elegir una dependiendo de una condición
+
+/*
+switch(condición) {
+  case 1:
+    código a ejecutar;
+    break;
+  case 2:
+    código a ejecutar;
+    break;
+}
+*/
+
+// Case evalúa con la igualdad estricta "===". El break le dice a JavaScript que detenga la ejecuión de las demás expresiones
+// Si se omite el break, entonces se ejecuta la siguiente declaración
+
+function testSwitch(letra) {
+  switch(letra) {
+    case "a":
+      console.log("A");
+      break;
+    case "b":
+      console.log("B");
+      break;
+  }
+}
+
+// testSwitch("a");
+// testSwitch("b");
+
+// No todas las veces se van a conocer todos los casos posibles, es por esto que se debe definir un valor para cuando no se 
+// ejecute ningún caso. Es muy parecido al else que se pone al final cuando se usan else if
+
+/*
+switch(condición) {
+  case 1:
+    código a ejecutar;
+    break;
+  case 2:
+    código a ejecutar;
+    break;
+  default:
+    código a ejecutar;
+    break;
+}
+*/
+
+function testSwitchDefault(letra) {
+  switch(letra) {
+    case "a":
+      console.log("A");
+      break;
+    case "b":
+      console.log("B");
+      break;
+    default:
+      console.log("Otra letra");
+      break;
+  }
+}
+
+// testSwitchDefault("a");
+// testSwitchDefault("c");
+
+// Si no se definen algunos casos, el código se va a seguir ejecutando hasta que encuentre un break 
+function testSwitchVarios(letra) {
+  switch(letra) {
+    case "a":
+    case "b":
+    case "c":
+      console.log("A - C");
+      break;
+    case "d":
+    case "e":
+    case "f":
+      console.log("D - F"); // Aquí como no hay break, entonces ejecuta también el siguiente y se detiene ahí porque si hay un brake
+    case "g":
+      console.log("G");
+      break;
+    default:
+      console.log("Otras letras");
+      break;
+  }
+}
+
+// testSwitchVarios("a");
+// testSwitchVarios("b");
+// testSwitchVarios("c");
+// testSwitchVarios("d");
+// testSwitchVarios("e");
+// testSwitchVarios("f");
+// testSwitchVarios("g");
+
+// Cuando se tienen varios if/else if, estos se pueden reemplazar por switch con sus respectivos case
+
+/* 
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+
+Quedaría así:
+
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+} 
+*/
+
+
+
 
