@@ -7,16 +7,16 @@
 // *******************************************************************************
 
 /* 
-JavaScript tiene disponible 8 tipos de datos:
+  JavaScript tiene disponible 8 tipos de datos:
 
-- undefined
-- null
-- boolean
-- string
-- symbol
-- bigint
-- number
-- object 
+  - undefined
+  - null
+  - boolean
+  - string
+  - symbol
+  - bigint
+  - number
+  - object 
 */
 
 // Si no se define inicialmente la variable, esta tiene un valor undefined 
@@ -205,14 +205,14 @@ varString = "Soy un \"String\".";
 // También se usan con otros caracteres
 
 /*
-\' single quote
-\" double quote
-\\ backslash
-\n newline
-\r carriage return
-\t tab
-\b word boundary
-\f form feed
+  \' single quote
+  \" double quote
+  \\ backslash
+  \n newline
+  \r carriage return
+  \t tab
+  \b word boundary
+  \f form feed
 */
 
 // Para concatenar dos estrings se puse hacer con el operador (+)
@@ -517,6 +517,7 @@ varBoolean = Anderson.hasOwnProperty("date");
 
 
 // *******************************************************************************
+// *******************************************************************************
 
 // CONDICIONALES
 
@@ -525,11 +526,11 @@ varBoolean = Anderson.hasOwnProperty("date");
 // llaves (curly braces).
 
 /* 
-La estructura de un if es así:
+  La estructura de un if es así:
 
-if (condición) {
-  código a ejecutar;
-}
+  if (condición) {
+    código a ejecutar;
+  }
 */
 
 function test (myCondition) {
@@ -546,11 +547,11 @@ function test (myCondition) {
 // Es usado para poder ejecutar una función cuando la condición del if es falsa
 
 /* 
-if (condición) {
-  código a ejecutar;
-} else {
-  código a ejecutar;
-}
+  if (condición) {
+    código a ejecutar;
+  } else {
+    código a ejecutar;
+  }
 */
 
 function testElse(numero) {
@@ -569,15 +570,15 @@ function testElse(numero) {
 // Esta declaración se usa cuando se tienen múltiples combinaciones
 
 /*
-if (condición 1) {
-  código a ejecutar;
-} else if (condición 2) {
-  código a ejecutar;
-} else if (condición 3) {
-  código a ejecutar;
-} else {
-  código a ejecutar
-}
+  if (condición 1) {
+    código a ejecutar;
+  } else if (condición 2) {
+    código a ejecutar;
+  } else if (condición 3) {
+    código a ejecutar;
+  } else {
+    código a ejecutar
+  }
 */
 
 function testElseIf(numero) {
@@ -605,19 +606,19 @@ function testElseIf(numero) {
 // console.log(2 === 2);
 
 /* 
-function isEqual(a, b) {
-  if (a === b) {
-    return true;
-  } else {
-    return false;
+  function isEqual(a, b) {
+    if (a === b) {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
 
-Quedaría así: 
+  Quedaría así: 
 
-function isEqual(a, b) {
-  return a === b;
-} 
+  function isEqual(a, b) {
+    return a === b;
+  } 
 */
 
 
@@ -629,14 +630,14 @@ function isEqual(a, b) {
 // Switch se usa cuando se tienen múltiples opciones para elegir una dependiendo de una condición
 
 /*
-switch(condición) {
-  case 1:
-    código a ejecutar;
-    break;
-  case 2:
-    código a ejecutar;
-    break;
-}
+  switch(condición) {
+    case 1:
+      código a ejecutar;
+      break;
+    case 2:
+      código a ejecutar;
+      break;
+  }
 */
 
 // Case evalúa con la igualdad estricta "===". El break le dice a JavaScript que detenga la ejecuión de las demás expresiones
@@ -660,17 +661,17 @@ function testSwitch(letra) {
 // ejecute ningún caso. Es muy parecido al else que se pone al final cuando se usan else if
 
 /*
-switch(condición) {
-  case 1:
-    código a ejecutar;
-    break;
-  case 2:
-    código a ejecutar;
-    break;
-  default:
-    código a ejecutar;
-    break;
-}
+  switch(condición) {
+    case 1:
+      código a ejecutar;
+      break;
+    case 2:
+      código a ejecutar;
+      break;
+    default:
+      código a ejecutar;
+      break;
+  }
 */
 
 function testSwitchDefault(letra) {
@@ -722,28 +723,108 @@ function testSwitchVarios(letra) {
 // Cuando se tienen varios if/else if, estos se pueden reemplazar por switch con sus respectivos case
 
 /* 
-if (val === 1) {
-  answer = "a";
-} else if (val === 2) {
-  answer = "b";
-} else {
-  answer = "c";
+  if (val === 1) {
+    answer = "a";
+  } else if (val === 2) {
+    answer = "b";
+  } else {
+    answer = "c";
+  }
+
+  Quedaría así:
+
+  switch(val) {
+    case 1:
+      answer = "a";
+      break;
+    case 2:
+      answer = "b";
+      break;
+    default:
+      answer = "c";
+  } 
+*/
+
+// *******************************************************************************
+// *******************************************************************************
+
+// CICLOS
+
+// Con los ciclos se debe tener mucho cuidado, ya que si se plantea mal se pueden generar bucles infinitos
+
+// WHILE (Ya no se usa mucho)
+// Evalúa la condición y luego ejecuta el código
+
+// Iteración: cada ciclo
+
+/* 
+  while(condición) {
+    código a ejecutar;
+    incremento o decremento de la variable;
+  }
+*/
+
+// DO WHILE (Ya no se usa mucho)
+// Ejecuta el código y luego evalúa la condición
+
+/*
+  do {
+    código a ejecutar;
+    incremento o decremento de la variable;
+  } while (condición)
+*/
+
+// FOR 
+
+/*
+  for (declaración de la variable; condición; incremento o decremento) {
+    líneas de código a ejecutar
+  }
+*/
+
+function testFor(numero) {
+  for (let i = 1; i <= numero; i++) {
+    console.log(i);
+  }
 }
 
-Quedaría así:
+// testFor(6);
 
-switch(val) {
-  case 1:
-    answer = "a";
-    break;
-  case 2:
-    answer = "b";
-    break;
-  default:
-    answer = "c";
+// Este tipo de ciclos se usas para recorrer un arreglo
+
+function testForArray(arreglo) {
+  for (let i = 0; i < arreglo.length; i++) {
+    console.log(arreglo[i]);
+  }
+}
+
+// testForArray([1, 2, 3, 4 , 5]);
+
+// Despues de JS 6 hay dos tipos de for:
+
+// FOR IN que es para hacer iteraciones con las propiedades de un objeto
+
+/* 
+for (variable in objeto) {
+  código a ejecutar;
 } 
 */
 
+function forIn() {
+  for (let propiedad in Anderson) {
+    console.log(`Key: ${propiedad}, Valor: ${Anderson[propiedad]}`);
+  }
+}
 
+// forIn();
 
+// FOR OF es utilizado para hacer iteracioens sobre cualquier elemento iterable en JavaScript
 
+varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function forOf() {
+  for (let item of varString) {
+    console.log(`${item}`);
+  }
+}
+
+forOf();
