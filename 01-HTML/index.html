@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Apuntes de HTML</title>
+  <title>Apuntes de <span>html</span>></title>
 </head>
 <body>
   <header>
-    <h1>HTML <i>Soy un header h1</i></h1>
+    <h1><span>html</span></h1><i>Soy un header h1</i></h1>
     <p>HTML signfica Lenguaje de Marcas de Hipertexto</p>
     <br>
   </header>
@@ -14,7 +14,7 @@
   <main>
 
     <section>
-      <h2>ESTRUCTURA DEL HTML</h2>
+      <h2>Estructura del <span>html</span></h2>
       <p>Un documento HTML siempre va a manejar esta estructura:</p>
 
       <i><pre>
@@ -32,7 +32,7 @@
     </section>
 
     <section>
-      <h2>HEADINGS h1 - h6</h2>
+      <h2>headings h1 - h6</h2>
       <p><i>h1</i> es la más importante y es la que más va a tener en cuenta el navegador. No necesariamente debe ser más grande que los demás. <i>h1</i> se utiliza solo una vez por archivo html, las demás si se pueden repetir.</p>
       <p>Los headings no se eligen por el tamaño sino por la importancia y el orden jerárquico que se les quiera dar. Los tamaños se cambian con CSS.</p>
       <p>Usualmente se usa h1, h2 y h3. De ahí para abajo ya se puede usar &lt;p&gt;</p>
@@ -46,6 +46,53 @@
       <h5>Soy un h5</h5>
       <h6>Soy un h6</h6>
       <br>
+    </section>
+
+    <section>
+      <h2>estructurar el contenido en <span>html</span></h2>
+      <p>Consiste en separar por medio de etiquetas las distintas secciones de una página web. Estas etiquetas ayudan a leer más fácil el código y ayudan con el Search Engine Optimization (SEO) y la accesibilidad. Estas son la etiquetas que se usan para agrupar el contenido:
+      </p>
+      <table>
+        <tr>
+          <th>etiqueta</th>
+          <th>uso</th>
+        </tr>
+        <tr>
+          <td>&lt;header&gt;&lt;/header&gt;</td>
+          <td>Usualmente va el título o el logo de la página</td>
+        </tr>
+        <tr>
+          <td>&lt;nav&gt;&lt;/nav&gt;</td>
+          <td>Agrupa el menú de navegación</td>
+        </tr>
+        <tr>
+          <td>&lt;main&gt;&lt;/main&gt;</td>
+          <td>El contenido principal de la página. Solo se puede usar una vez</td>
+        </tr>
+        <tr>
+          <td>&lt;footer&gt;&lt;/footer&gt;</td>
+          <td>La parte final de la página</td>
+        </tr>
+        <tr>
+          <td>&lt;section&gt;&lt;/section&gt;</td>
+          <td>Para agrupar distintas secciones de la página</td>
+        </tr>
+        <tr>
+          <td>&lt;article&gt;&lt;/article&gt;</td>
+          <td>Para agrupar entradas de blog, noticias, foros, artículos, etc. El contenido de esta etiqueta es independiente</td>
+        </tr>
+        <tr>
+          <td>&lt;aside&gt;&lt;/aside&gt;</td>
+          <td>Contenido en la parte lateral de la página</td>
+        </tr>
+        <tr>
+          <td>&lt;div&gt;&lt;/div&gt;</td>
+          <td>Se usa para agrupar algo cuando no encaja en ninguna de las anteriores etiquetas</td>
+        </tr>
+      </table>
+
+      <p>Una guía para saber cuando se usa &lt;section&gt;&lt;/section&gt; es cuando se tenga un heading y este no corresponda ni al header o al main o a algún otro grupo.
+      </p>
     </section>
   </main>
 
