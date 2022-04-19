@@ -100,8 +100,8 @@
         </tr>
       </table>
 
-      <p>Una guía para saber cuando se usa &lt;section&gt;&lt;/section&gt; es cuando se tenga un heading y este no corresponda ni al header o al main o a algún otro grupo.
-      </p>
+      <p>Una guía para saber cuando se usa &lt;section&gt;&lt;/section&gt; es cuando se tenga un heading y este no corresponda ni al header o al main o a algún otro grupo.</p>
+      <br>
     </section>
 
     <!--*************************************************************************************-->
@@ -120,6 +120,31 @@
       <p>Si se quiere direccionar a una sección de la página se hace de la siguiente forma:</p>
 
       <p>Se define un id para el elemento al que se quiere redireccionar, por ejemplo: <i>&lt;h1 id=”titulo”&gt;Título&lt;/h1&gt;</i>. Luego se elige el id desde el <i>href</i> poniendo antes un #.</p>
+      <br>
+    </section>
+
+    <!--*************************************************************************************-->
+    <!--Agregar imágenes en HTML-->
+    <!--*************************************************************************************-->
+    <section>
+      <h2>agregar imágenes en <span>html</span></h2>
+      <p>Páginas para íconos:</p>
+      <ul>
+        <li><a href="https://tablericons.com/" target="_blank">Tabler Icons</a></li>
+        <li><a href="https://heroicons.com/" target="_blank">Hero Icons</a></li>
+        <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+      </ul>
+      
+      <p>Para insertar una imagen se usa &lt;img&gt;. No necesita cierre. En src puede ir tanto una url de una imágen o la ubicación. Se usa así:</p>
+
+      <p><i>&lt;img src="imagen.jpg" alt="Esto es una imagen"&gt;</i></p>
+      <img src=/Images/spidey1.jpg alt="Spiderman">
+
+      <p>En el atributo alt va un texto descriptivo de la imagen que se utiliza para mejorar la accesibilidad del sitio y es mostrado si falla al cargar la imagen. El texto se debe elegir cuidadosamente ya que este texto será lo que los lectores de pantalla van a decirle a qué corresponde la imagen a una persona que tenga problemas de visión. También es usado por los sistemas de búsqueda. Sin embargo, cuando la imagen ya tiene un texto que la describe o es una imagen decorativa que no aporta nada a la página, en estos casos no es necesario poner una descripción, simplemente se deja en blanco <i>alt=""</i>.</p>
+
+      <p>Una imagen también se puede poner como link:</p>
+      <p><a href="#"><img src="/Images/spidey1.jpg"></a></p>
+      <br>
     </section>
   </main>
 
