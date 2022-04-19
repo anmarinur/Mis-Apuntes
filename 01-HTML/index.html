@@ -13,6 +13,9 @@
   
   <main>
 
+    <!--*************************************************************************************-->
+    <!--Estructura del HTML-->
+    <!--*************************************************************************************-->
     <section>
       <h2>Estructura del <span>html</span></h2>
       <p>Un documento HTML siempre va a manejar esta estructura:</p>
@@ -31,6 +34,9 @@
       <br>
     </section>
 
+    <!--*************************************************************************************-->
+    <!--Headings-->
+    <!--*************************************************************************************-->
     <section>
       <h2>headings h1 - h6</h2>
       <p><i>h1</i> es la más importante y es la que más va a tener en cuenta el navegador. No necesariamente debe ser más grande que los demás. <i>h1</i> se utiliza solo una vez por archivo html, las demás si se pueden repetir.</p>
@@ -48,6 +54,9 @@
       <br>
     </section>
 
+    <!--*************************************************************************************-->
+    <!--Estructurar el contenido en HTML-->
+    <!--*************************************************************************************-->
     <section>
       <h2>estructurar el contenido en <span>html</span></h2>
       <p>Consiste en separar por medio de etiquetas las distintas secciones de una página web. Estas etiquetas ayudan a leer más fácil el código y ayudan con el Search Engine Optimization (SEO) y la accesibilidad. Estas son la etiquetas que se usan para agrupar el contenido:
@@ -94,18 +103,40 @@
       <p>Una guía para saber cuando se usa &lt;section&gt;&lt;/section&gt; es cuando se tenga un heading y este no corresponda ni al header o al main o a algún otro grupo.
       </p>
     </section>
+
+    <!--*************************************************************************************-->
+    <!--Menú de navegación-->
+    <!--*************************************************************************************-->
+    <section>
+      <h2>menú navegación</h2>
+      <p>&lt;nav&gt;&lt;/nav&gt; Con esto se agrupa el menú de navegación. Se caracteriza por tener varios enlaces. Para cada menú se usa la etiqueta &lt;a&gt;&lt;/a&gt; que es la que se usa para crear enlaces:
+      </p>
+
+      <p><i>&lt;a href=”#”&gt;Inicio&lt;/a&gt;</i> en donde # va la dirección o el nombre del archivo html a donde quiere redirigir. Para simular un link se puede dejar #.
+      </p>
+
+      <p>Si se añade el atributo <i>target=”_blank”</i> el link se abre en una nueva ventana.</p>
+
+      <p>Si se quiere direccionar a una sección de la página se hace de la siguiente forma:</p>
+
+      <p>Se define un id para el elemento al que se quiere redireccionar, por ejemplo: <i>&lt;h1 id=”titulo”&gt;Título&lt;/h1&gt;</i>. Luego se elige el id desde el <i>href</i> poniendo antes un #.</p>
+    </section>
   </main>
 
-  <section>
-    <h2>NOTAS</h2>
-    <ul>
-      <li>Los comentarios en HTML se escriben así <i>&lt;!-- --&gt;</i></li>
-      <li>HTML no es un lenguaje de programación</li>
-      <li>El archivo principal suele llamarse index.html</li>
-      <li>En VSC la tecla <i>! + ENTER</i> saca una estructura básica de HTML</li>
-    </ul>
-  </section>
-
+  <footer>
+    <section>
+      <h2>notas</h2>
+      <ul>
+        <li>Los comentarios en HTML se escriben así <i>&lt;!-- --&gt;</i></li>
+        <li>HTML no es un lenguaje de programación</li>
+        <li>El archivo principal suele llamarse index.html</li>
+        <li>En VSC la tecla <i>! + ENTER</i> saca una estructura básica de HTML</li>
+        <li>En VCS si se quiere copiar una línea de código de forma rápida, se selecciona la línea y con SHIFT + ALT + Flecha hacia abajo se va duplicando la línea. </li>
+        <li>En HTML los textos se recomiendan en minúscula y ya con CSS se ponen en mayúscula.</li>
+        <li>Si se quiere probar un link pero no se tiene aún la url, entonces se puede poner un #</li>
+      </ul>
+    </section>
+  </footer>
   
 </body>
 </html>
