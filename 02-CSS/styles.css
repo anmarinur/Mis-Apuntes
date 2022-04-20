@@ -1,6 +1,6 @@
-/* Esto es un comentario */
-
-/* Ejemplo de una propiedad en css */
+body {
+  font-family: 'Krub', sans-serif;
+}
 
 /* Se puede seleccionar por elementos llamando a la etiqueta sin las llaves: */
 p {
@@ -28,7 +28,7 @@ p {
 }
 
 p {
-  color: green;
+  color: black;
 }
 
 /* En este caso tomaría el color green ya que es el último. Si se usa un id para establecer el estilo, este va a tener prioridad sobre un class no importa en qué lugar se ubique. Si se utiliza el style de forma inline, este va a tener prioridad sobre el id y sobre toda declaración en CSS.*/
@@ -45,11 +45,37 @@ p {
 }
 */
 
-/* Para seleccionar una clase, se pone esta con un punto */
+/* Para seleccionar una clase, se pone esta con un punto y para seleccionar un id se pone un #*/
 
-.parrafo-prueba {
+.parrafo-prueba-class {
   color: blue;
 }
 
+#parrafo-prueba-id {
+  color: red;
+}
 
+/* SPAN */
+span {
+  font-style: italic;
+  color: blue;
+}
 
+#monospace {
+  font-family: monospace;
+  font-style: normal;
+}
+
+#serif {
+  font-family: serif;
+  font-style: normal;
+}
+
+#sans-serif {
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+.propiedad {
+  background-color: yellow;
+}
