@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Apuntes de <span>html</span>></title>
+  <title>Apuntes de html</title>
 </head>
 <body>
   <header>
@@ -185,6 +185,127 @@
         <li>Segundo ítem</li>
         <li>Tercer ítem</li>
       </ul>
+      <br>
+    </section>
+
+    <!--*************************************************************************************-->
+    <!--Listas en HTML-->
+    <!--*************************************************************************************-->
+    <section>
+      <h2>formularios en <span>html</span></h2>
+      <p>Va entre las etiquetas <i>&lt;form&gt;&lt;/form&gt;</p></i>
+      <i><pre>
+        &lt;form&gt;
+          &lt;fieldset&gt;
+
+          &lt;/fieldset&gt;
+        &lt;/form&gt;
+      </pre></i>
+
+      <form>
+        <fieldset>
+
+        </fieldset>
+      </form>
+      <p>El cuadro es el que genera el <i>fieldset</i></p>
+      <p>Para especificar el destino de la información tomada del formulario, se usa el atributo <i>action</i> de <i>form</i>:</p>
+      <i><pre>
+        &lt;form action="url en donde se va a guardar la información"&gt;
+          &lt;input&gt;
+        &lt;/form&gt;
+      </pre></i>
+      <p>Con el atributo method de form se puede elegir la forma de enviar los datos del formulario. Con <i>get</i> los datos se envían a través de la url por lo tanto todos los datos son visibles al usuario ya que se ven en la url. Con el método <i>post</i> se envía en segundo plano y por lo tanto no son visibles para el usuario.</p>
+      <p>Para el título del formulario se usa <i>&lt;legend&gt;Título del formulario&lt;/legend&gt;</i>.</p>
+
+      <p>Para escribir la información que se solicita se usa &lt;label&gt;Nombre&lt;/label&gt;. Para mostrar el espacio en donde el usuario escribe la información solicitada se usa la etiqueta <i>&lt;input&gt;</i> que habilita la casilla en donde se escribe lo solicitado. No necesita cerrarse. El atributo <i>type</i> es para elegir el tipo de información que va en la casilla, ya sea texto <i>text</i> que es el predeterminado, un número de teléfono <i>tel</i>, correo electrónico <i>email</i>, <i>date</i> para una fecha, <i>file</i> para cargar un archivo, <i>time</i> para hora o fecha. Si se quiere hacer un checkbox se pone en el atributo <i>type="checkbox"</i> o <i>"radio"</i>. También existe el tipo <i>reset</i> que borra todos los campos. Cada radio button puede ponerse dentro de un label así este se asocia automáticamente con el botón de entrada:</p>
+
+      <p>Con &lt;placeholder&gt;&lt;/placeholder&gt; se pone el texto dentro de la casilla en donde se le indica al usuario que escribir. Este desaparece apenas el usuario escriba algo dentro de la casilla.</p>
+
+      <p>Si se quiere trabajar con un grupo de radio buttons, y que al seleccionar uno de ellos, los demás se deseleccionen manteniendo seleccionado siempre uno solo se usa el atributo <i>name</i> y se debe poner el mismo para todos.</p>
+
+      <p>Es considerado buena práctica poner el atributo <i>for</i> en el <i>label</i> con el mismo valor que el <i>id</i> de cada <i>input</i>. Esto ayuda a que se cree una relación entre el <i>label</i> y el <i>input</i> y es usado por los lectores de pantalla para las personas con problemas visuales.</p>
+
+      <p>Se usa el atributo <i>value</i> de <i>input</i> para reportar el valor de cada radio button o checkbox. Así cuando se de enviar la información a la base de datos este enviará <i>name = value</i> de cada input.</p>
+
+      <p>El atributo valor especifica el valor de un elemento <i>input</i>. Es usado de forma diferente para diferentes tipos de entradas:</p>
+
+      <ul>
+        <li>Para "button", "reset", and "submit" - Define el texto del botón</li>
+        <li>Para "text", "password", and "hidden" - Define el valor inicial (default) para el campo de la entrada</li>
+        <li>Para "checkbox", "radio", "image" - Define el valor asociado a una entrada y es también el valor que se envía al darle submit</li>
+      </ul>
+      
+      <p>Nota: El atributo valor no puede ser usado el tipo <i>file</i></p>
+
+      <p>Para poner un checkbox o un radio button marcado por defecto simplemente se añade la palabra <i>checked</i> al <i>input</i>.</p>
+
+      <p>Cuando se quiere dar la opción para escribir un texto grande se usa &lt;textarea&gt;&lt;/textarea&gt;. Con el atributo <i>rows</i> se puede definir el número de filas que va a tener el campo de texto y con <i>cols</i> el número de columnas.</p>
+
+      <p>Para hacer que un campo sea obligatorio llenarlo, se añade <i>required</i> dentro del <i>input</i></p>
+
+      <p>Para poner un botón que envíe la información del formulario se usa <i>input</i> con el type <i>submit</i> y en valor el nombre que va a tener el botón, lo mismo para el r<i>reset</i> pero con el type <i>reset</i>. También se puede usar la etiqueta <i>&lt;button type="submit">Enviar&lt;/button&gt;</i></p>
+
+      <p>Con el fin de dar un mejor acceso a la página por medio de teclas específicas para acceder a botones, se utiliza el atributo <i>accesskey</i>:</p>
+
+      <p><i>&lt;button type="submit" accesskey="b">Enviar&lt;/button&gt;</i></p>
+
+      <p>Con &lt;select&gt;&lt;/select&gt; se puede hacer un menú desplegable para que el usuario elija varias opciones del menú. Y con &lt;option&gt;&lt;/option&gt; (la etiqueta de cierre no es obligatoria, siempre y cuando el siguiente elemento sea un &lt;option&gt;) se pueden agregar estas opciones del menú.
+      </p>
+
+      <form>
+        <fieldset>
+          <legend>Soy un formulario</legend>
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Tu nombre" name="nombre" required><br>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" placeholder="Tu teléfono" name="telefono"><br>
+
+          <label for="correo">E-mail</label>
+          <input type="email" placeholder="Tu correo" name="correo" required><br>
+
+          <label for="fecha">Fecha</label>
+          <input type="date" placeholder="Fecha de hoy" name="fecha"><br>
+
+          <label for="adjunto">Documento adjunto:</label>
+          <input type="file" placeholder="Adjuntar" name="adjunto"><br>
+
+          <label for="hora">Hora</label>
+          <input type="time" placeholder="Hora" name="hora" required><br>
+
+          <p>Seleccione las opciones</p>
+          <label>
+            <input type="checkbox" valor="opcion1">Opción 1<br>
+          </label>
+          <label>
+            <input type="checkbox" valor="opcion2">Opción 2<br>
+          </label>
+          <label>
+            <input type="checkbox" valor="opcion3">Opción 3<br>
+          </label>
+
+          <p>Seleccione las opciones</p>
+          <label for="opcion1">
+            <input type="radio" name="opciones-checkbox" valor="opciones-checkbox1" checked>Opción 1<br>
+          </label>
+          <label for="opcion2">
+            <input type="radio" name="opciones-checkbox" valor="opciones-checkbox2">Opción 2<br>
+          </label>
+          <label for="opcion3">
+            <input type="radio" name="opciones-checkbox" valor="opciones-checkbox3">Opción 3<br>
+          </label>
+
+          <select name=”security-question”>
+            <option value=”first-name-pet”>Nombre de su primer mascota</option>
+            <option value=”first-job”>Nombre de su primer empleo</option>
+          </select><br>
+        
+          <textarea name="textarea" rows="10" cols="50" placeholder="Escriba algo aquí" required></textarea><br>
+
+          <input type="reset" value="Reset"><input type="submit" value="Submit">
+
+        </fieldset>
+      </form>
       <br>
     </section>
   </main>
