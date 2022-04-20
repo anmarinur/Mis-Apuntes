@@ -465,8 +465,10 @@ const funcionExpresada = function() {
 
 // OBJETOS
 
-// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa. Se definen usando las llaves { }.
-// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto. A esta información se le llama atributo. Cuando esta información es una función, ya no se llama atributo sino método:
+// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa.
+// Se definen usando las llaves { }. Aquello que contienen los objetos son las propiedades y estas no tienen un índice como los arrays.
+// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto mismo. Cuando esta información es una función, 
+// ya no se llama atributo sino método:
 
 const ObjetoNuevo = {};
 // console.log(ObjetoNuevo);
@@ -490,15 +492,31 @@ const Anderson = {
 }
 // console.log(Anderson);
 
-// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se va a acceder a una función
-// se le debe poner paréntesis al final del nombre
+// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se está accediendo a una propiedad
+// con el método de llaves, la propiedad debe ir entre comillas. Cuando es una variable, se debe usar el método de llaves y no se ponen ""
+// Cuando se va a acceder a una función se le debe poner paréntesis al final del nombre
 
 // console.log(Anderson["contacto"]);  // No tan usada
+// varNombre = nombre;
+// console.log(Anderson[varNombre]);
 // console.log(Anderson.apellido);
 // console.log(Anderson.pasatiempos[1]);
 // console.log(Anderson.contacto.nick[0]);
 // Anderson.saludar();
 // Anderson.imprimir();
+
+// Se pueden actualizar los valores de las variables que tiene un objeto, llamando a la propiedad con cualquier método . o []
+// y luego = y el nuevo valor
+
+Anderson.apellido = ["Marín", "Uribe"];
+
+// También se pueden agregar nuevas propiedades utilizando cualquier método y poniendo el nombre de la nueva propiedad y el valor
+
+Anderson.heroFan = "Spidey";
+
+// Para eliminar propiedades se pone delete y luego se llama a la propiedad que se quiera eliminar
+
+delete Anderson.pasatiempos;
 
 // Con el método .keys que es un objeto global se crea un arreglo iterable con todos las claves (keys) del objeto
 varString = Object.keys(Anderson);
