@@ -465,8 +465,10 @@ const funcionExpresada = function() {
 
 // OBJETOS
 
-// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa. Se definen usando las llaves { }.
-// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto. A esta información se le llama atributo. Cuando esta información es una función, ya no se llama atributo sino método:
+// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa.
+// Se definen usando las llaves { }. Aquello que contienen los objetos son las propiedades y estas no tienen un índice como los arrays.
+// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto mismo. Cuando esta información es una función, 
+// ya no se llama atributo sino método:
 
 const ObjetoNuevo = {};
 // console.log(ObjetoNuevo);
@@ -490,15 +492,31 @@ const Anderson = {
 }
 // console.log(Anderson);
 
-// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se va a acceder a una función
-// se le debe poner paréntesis al final del nombre
+// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se está accediendo a una propiedad
+// con el método de llaves, la propiedad debe ir entre comillas. Cuando es una variable, se debe usar el método de llaves y no se ponen ""
+// Cuando se va a acceder a una función se le debe poner paréntesis al final del nombre
 
 // console.log(Anderson["contacto"]);  // No tan usada
+// varNombre = nombre;
+// console.log(Anderson[varNombre]);
 // console.log(Anderson.apellido);
 // console.log(Anderson.pasatiempos[1]);
 // console.log(Anderson.contacto.nick[0]);
 // Anderson.saludar();
 // Anderson.imprimir();
+
+// Se pueden actualizar los valores de las variables que tiene un objeto, llamando a la propiedad con cualquier método . o []
+// y luego = y el nuevo valor
+
+Anderson.apellido = ["Marín", "Uribe"];
+
+// También se pueden agregar nuevas propiedades utilizando cualquier método y poniendo el nombre de la nueva propiedad y el valor
+
+Anderson.heroFan = "Spidey";
+
+// Para eliminar propiedades se pone delete y luego se llama a la propiedad que se quiera eliminar
+
+delete Anderson.pasatiempos;
 
 // Con el método .keys que es un objeto global se crea un arreglo iterable con todos las claves (keys) del objeto
 varString = Object.keys(Anderson);
@@ -746,9 +764,8 @@ function testSwitchVarios(letra) {
 */
 
 // *******************************************************************************
-// *******************************************************************************
-
 // CICLOS
+// *******************************************************************************
 
 // Con los ciclos se debe tener mucho cuidado, ya que si se plantea mal se pueden generar bucles infinitos
 
@@ -827,4 +844,62 @@ function forOf() {
   }
 }
 
-forOf();
+// forOf();
+
+
+// *******************************************************************************
+// MANEJO DE ERRORES
+// *******************************************************************************
+
+// Método usado para evaluar una porción del código e identificar errores
+
+// try{
+//   console.log("En try se pone el código a evaluar");
+//   noExiste; // Esta variable no existe y por lo tanto salta a catch. No saltan errores porque este código maneja el error
+//   console.log("Segundo mensaje de prueba"); // Esta línea no la lee porque el error estuvo antes y saltó al catch
+// } catch (error){
+//   console.log("Catch captura cualquier error surgido o lanzado desde el try") // Como hubo un error entonces entró al catch
+//   console.log(error); // Se manda a imprimir el error para ver que falló
+// } finally {  // Es más usado en back end
+//   console.log("El bloque finally se ejecutará siempre al final de un bloque try-catch")
+// }
+
+// Ejemplo:
+
+// try {
+//   // let numero = 10;
+//   let numero = "diez";
+
+//   if (isNaN(numero)) {
+//     throw new Error("El caracter introducido no es un número");
+//   }
+
+//   console.log(numero * numero);
+// } catch (error) {
+//   console.log(`Se produjo el siguiente error ${error}`);
+// }
+
+// *******************************************************************************
+// BREAK - CONTINUE
+// *******************************************************************************
+
+// Estos métodos solo se pueden usar en funciones de control como los if, for, etc. No se pueden usar en métodos para objetos
+// El break saca de la estructura en donde se encuentre. Va hasta la función padre y rompe el ciclo
+// Continue hace que se salte el código de la iteración en donde se llamó esta función
+
+varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+// for (let i = 0; i < varString.length; i++) {
+//   if (i === 5) {
+//     break;
+//   }
+//   console.log(varString[i]);
+// }
+
+// for (let i = 0; i < varString.length; i++) {
+//   if (i === 5) {
+//     continue;
+//   }
+//   console.log(varString[i]);
+// }
+

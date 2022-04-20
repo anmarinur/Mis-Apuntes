@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet"> 
+  <link href="styles.css" rel="preload" as="style">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    h2 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>css</h1>
+    <p>Significa Hojas de estilo en cascada. Se encarga de la parte del diseño del html.</p>
+  </header>
+  
+  <main>
+    <!-- Aplicando estilos en CSS -->
+    <section>
+      <p>Hay varias formas de aplicar el estilo a un documento html. La primera es añadir directamente en línea al elemento con el atributo <span>style</span>. La desventaja es que este solo afecta al elemento en donde se está poniendo el <span>style</span>.</p>
+
+      <p>&lt;h2 style="color: blue"&gt;Este título tiene su propio estilo&lt;/h2&gt;</p> 
+      <h2 style="color: blue">Este título tiene su propio estilo</h2> 
+
+      <p class="propiedad">color: Cambiar el color de un texto</p>
+
+      <p>Una mejor forma es crear un bloque &lt;style&gt;&lt;/style&gt; en el &lt;head&gt; del archivo html.</p>
+
+      <h2>Soy un título modificado desde el head</h2>
+
+      <p>Si se usa un id para establecer el estilo, este va a tener prioridad sobre un class no importa en qué lugar se ubique. Si se utiliza el style de forma inline, este va a tener prioridad sobre el id y sobre toda declaración en CSS.</p>
+
+      <p>Pero se recomienda hacerlo en un archivo aparte y que este vaya dentro de una carpeta.</p>
+
+      <p>Para conectar el archivo html con el css se usa la etiqueta link y se ubica en el &lt;head&gt; del archivo</p>
+
+      <p>&lt;link href="styles.css" rel="stylesheet"&gt;</p>
+
+      <p>Para que la página cargue más rápido se puede poner un preload antes del link en donde se carga la página css:</p>
+
+      <p>&lt;link href="styles.css" rel="preload" as="style"&gt;</p>
+
+      <p class="parrafo-prueba-class">Este es un ejemplo de como agregar una clase a cualquier elemento. En este ejemplo la clase se llama "parrafo-prueba" y este se invoca desde la hoja styles.css</p>
+
+      <p id="parrafo-prueba-id">Este es un ejemplo de como agregar un id a cualquier elemento. A diferencia de las clases se considera como una buena práctica usarlos una única vez para cada elemento, no son reutilizables. Se agregan igual que las clases pero en vez de class va id</p>
+    </section>
+
+    <!--Cambiar el tipo de fuente en CSS-->
+    <section>
+      <h2>cambiar el tipo de fuente en css</h2>
+      <p>Se usa la propiedad <span>font-family</span> para seleccionar la font de un elemento. Si se quiere incluir una font externa, se utiliza la etiqueta <span>link</span>:</p>
+
+      <p class="propiedad">font-family: Para seleccionar la fuente de un texto</p>
+
+      <p>&lt;link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"&gt;</p>
+      <p>Si es de google, el mísmo le da la anterior instrucción, y esta va en el <span>head</span>. También da el código que iría en el archivo CSS, específicamente en el <span>body</span> si es que se quiere cambiar la font de todo el documento</p>
+      <p>El código que va en el css es el que le da el valor a la propiedad <span>font-family</span>.Si la fuente en su nombre tiene espacios, se debe poner entre comillas: "Open Sans".</p>
+      <p>Después de la fuente seleccionada en font-family, es opcional poner una font generica separándola con una coma (,) y se usa en caso de que la fuente indicada no esté disponible y se pone una de las que están por defecto para el sistema: <span id="monospace">monospace</span>, <span id="serif">serif</span> y <span id="sans-serif">sans-serif</span>.</p>
+    </section>
+    
+  </main>
+
+  
+</body>
+</html>
