@@ -764,9 +764,8 @@ function testSwitchVarios(letra) {
 */
 
 // *******************************************************************************
-// *******************************************************************************
-
 // CICLOS
+// *******************************************************************************
 
 // Con los ciclos se debe tener mucho cuidado, ya que si se plantea mal se pueden generar bucles infinitos
 
@@ -845,4 +844,39 @@ function forOf() {
   }
 }
 
-forOf();
+// forOf();
+
+
+// *******************************************************************************
+// MANEJO DE ERRORES
+// *******************************************************************************
+
+// Método usado para evaluar una porción del código e identificar errores
+
+// try{
+//   console.log("En try se pone el código a evaluar");
+//   noExiste; // Esta variable no existe y por lo tanto salta a catch. No saltan errores porque este código maneja el error
+//   console.log("Segundo mensaje de prueba"); // Esta línea no la lee porque el error estuvo antes y saltó al catch
+// } catch (error){
+//   console.log("Catch captura cualquier error surgido o lanzado desde el try") // Como hubo un error entonces entró al catch
+//   console.log(error); // Se manda a imprimir el error para ver que falló
+// } finally {  // Es más usado en back end
+//   console.log("El bloque finally se ejecutará siempre al final de un bloque try-catch")
+// }
+
+// Ejemplo:
+
+// try {
+//   // let numero = 10;
+//   let numero = "diez";
+
+//   if (isNaN(numero)) {
+//     throw new Error("El caracter introducido no es un número");
+//   }
+
+//   console.log(numero * numero);
+// } catch (error) {
+//   console.log(`Se produjo el siguiente error ${error}`);
+// }
+
+
