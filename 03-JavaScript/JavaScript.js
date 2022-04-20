@@ -879,4 +879,27 @@ function forOf() {
 //   console.log(`Se produjo el siguiente error ${error}`);
 // }
 
+// *******************************************************************************
+// BREAK - CONTINUE
+// *******************************************************************************
+
+// Estos métodos solo se pueden usar en funciones de control como los if, for, etc. No se pueden usar en métodos para objetos
+// El break saca de la estructura en donde se encuentre. Va hasta la función padre y rompe el ciclo
+// Continue hace que se salte el código de la iteración en donde se llamó esta función
+
+varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+// for (let i = 0; i < varString.length; i++) {
+//   if (i === 5) {
+//     break;
+//   }
+//   console.log(varString[i]);
+// }
+
+// for (let i = 0; i < varString.length; i++) {
+//   if (i === 5) {
+//     continue;
+//   }
+//   console.log(varString[i]);
+// }
 
