@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS</title>
+  <link href="styles.css" rel="preload" as="style">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    h2 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>css</h1>
+  <p>Significa Hojas de estilo en cascada. Se encarga de la parte del diseño del html.</p>
+
+  <p>Hay varias formas de aplicar el estilo a un documento html. La primera es añadir directamente en línea al elemento con el atributo <span>style</span>. La desventaja es que este solo afecta al elemento en donde se está poniendo el <span>style</span>.</p>
+
+  <p>&lt;h2 style="color: blue"&gt;Este título tiene su propio estilo&lt;/h2&gt;</p> 
+  <h2 style="color: blue">Este título tiene su propio estilo</h2> 
+
+  <p>Una mejor forma es crear un bloque &lt;style&gt;&lt;/style&gt; en el &lt;head&gt; del archivo html.</p>
+
+  <h2>Soy un título modificado desde el head</h2>
+
+  <p>Si se usa un id para establecer el estilo, este va a tener prioridad sobre un class no importa en qué lugar se ubique. Si se utiliza el style de forma inline, este va a tener prioridad sobre el id y sobre toda declaración en CSS.</p>
+
+  <p>Pero se recomienda hacerlo en un archivo aparte y que este vaya dentro de una carpeta.</p>
+
+  <p>Para conectar el archivo html con el css se usa la etiqueta link y se ubica en el &lt;head&gt; del archivo</p>
+
+  <p>&lt;link href="styles.css" rel="stylesheet"&gt;</p>
+
+  <p>Para que la página cargue más rápido se puede poner un preload antes del link en donde se carga la página css:</p>
+
+  <p>&lt;link href="styles.css" rel="preload" as="style"&gt;</p>
+
+  <p class="parrafo-prueba">Este es un ejemplo de como agregar una clase a cualquier elemento. En este ejemplo la clase se llama "parrafo-prueba" y este se invoca desde la hoja styles.css</p>
+</body>
+</html>

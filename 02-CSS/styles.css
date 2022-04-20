@@ -1,0 +1,55 @@
+/* Esto es un comentario */
+
+/* Ejemplo de una propiedad en css */
+
+/* Se puede seleccionar por elementos llamando a la etiqueta sin las llaves: */
+p {
+  color: blue;
+}
+
+/* Llamando por clases: */
+/* Las clases se identifican al crearlas o al llamarlas porque inician con un punto */
+.parrafo {
+  color: red;
+}
+
+/* O llamando por el id */
+/* Los id se identifican porque al crearlas o al llamarlas empiezan por el símbolo numeral (#): */
+#parrafo {
+  color: yellow;
+}
+
+/* O incluso por atributo, combinación de descendientes, etc.*/
+
+/* Se llama hoja de estilos en cascada porque si se está escribiendo el mismo selector, entonces se toma la última que se le de: */
+
+p {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+
+/* En este caso tomaría el color green ya que es el último. Si se usa un id para establecer el estilo, este va a tener prioridad sobre un class no importa en qué lugar se ubique. Si se utiliza el style de forma inline, este va a tener prioridad sobre el id y sobre toda declaración en CSS.*/
+
+/* Cuando se quiere tener seguridad en que un estilo sobreescribe cualquier otro se usa !important */
+
+/* 
+p {
+  color: lightcoral !important;
+}
+
+p {
+  color: blueviolet;
+}
+*/
+
+/* Para seleccionar una clase, se pone esta con un punto */
+
+.parrafo-prueba {
+  color: blue;
+}
+
+
+
