@@ -461,9 +461,8 @@ const funcionExpresada = function() {
 
 
 // *******************************************************************************
-// *******************************************************************************
-
 // OBJETOS
+// *******************************************************************************
 
 // A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa.
 // Se definen usando las llaves { }. Aquello que contienen los objetos son las propiedades y estas no tienen un índice como los arrays.
@@ -493,7 +492,8 @@ const Anderson = {
 // console.log(Anderson);
 
 // Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se está accediendo a una propiedad
-// con el método de llaves, la propiedad debe ir entre comillas. Cuando es una variable, se debe usar el método de llaves y no se ponen ""
+// con el método de llaves, la propiedad debe ir entre comillas. Esta se usa también cuando el nombre de la propiedad tiene espacios.
+// Cuando es una variable, se debe usar el método de llaves y no se ponen ""
 // Cuando se va a acceder a una función se le debe poner paréntesis al final del nombre
 
 // console.log(Anderson["contacto"]);  // No tan usada
@@ -535,9 +535,8 @@ varBoolean = Anderson.hasOwnProperty("date");
 
 
 // *******************************************************************************
-// *******************************************************************************
-
 // CONDICIONALES
+// *******************************************************************************
 
 // IF, ELSE IF, ELSE
 // El if es usado para tomar decisiones en el código. Si la condición es verdadera (true) se va a ejecutar lo que esté entre las 
@@ -641,9 +640,8 @@ function testElseIf(numero) {
 
 
 // *******************************************************************************
-// *******************************************************************************
-
 // SWITCH, CASE, BREAK
+// *******************************************************************************
 
 // Switch se usa cuando se tienen múltiples opciones para elegir una dependiendo de una condición
 
