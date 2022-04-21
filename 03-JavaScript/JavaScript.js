@@ -518,6 +518,38 @@ Anderson.heroFan = "Spidey";
 
 delete Anderson.pasatiempos;
 
+// OBJETOS LITERALES
+
+nombre = "Dasha";
+edad = 5;
+
+const perro = {
+  nombre: nombre,
+  edad: edad,
+  ladrar: function() {
+    console.log("guau guau");
+  }
+}
+
+console.log(perro);
+perro.ladrar();
+
+// Esto mismo se puede escribir de la siguiente forma. Cuando se quiere guardar un valor de una variable que tiene el mismo nombre de la 
+// propiedad, se escribe una sola vez y ya. Si se pone una propiedad que tiene un nombre diferente, ya se escribe normal.
+
+const dog = {
+  nombre,
+  edad,
+  ladrar() {  // Este es la nueva forma para escribir los métodos
+    console.log("guau guau");
+  }
+}
+
+console.log(dog);
+dog.ladrar();
+
+// MÉTODOS
+
 // Con el método .keys que es un objeto global se crea un arreglo iterable con todos las claves (keys) del objeto
 varString = Object.keys(Anderson);
 // console.log(varString); 
@@ -914,12 +946,12 @@ let uno = numeros[0],
   dos = numeros[1],
   tres = numeros[2];
 
-console.log(uno, dos, tres);
+// console.log(uno, dos, tres);
 
 // Con destructuración
 
 const [one, two, three] = numeros;
-console.log(one, two, three);
+// console.log(one, two, three);
 
 // Otro ejemplo con objetos
 
@@ -930,4 +962,4 @@ let persona = {
 };
 
 let{firstName, sureName, age} = persona;  // Las variables se deben llamar igual que la propiedad de la que voy a destructurar los valores
-console.log(firstName, sureName, age);
+// console.log(firstName, sureName, age);
