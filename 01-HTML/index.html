@@ -189,7 +189,7 @@
     </section>
 
     <!--*************************************************************************************-->
-    <!--Listas en HTML-->
+    <!--FORMULARIOS EN HTML-->
     <!--*************************************************************************************-->
     <section>
       <h2>formularios en <span>html</span></h2>
@@ -207,6 +207,7 @@
 
         </fieldset>
       </form>
+
       <p>El cuadro es el que genera el <i>fieldset</i></p>
       <p>Para especificar el destino de la información tomada del formulario, se usa el atributo <i>action</i> de <i>form</i>:</p>
       <i><pre>
@@ -308,6 +309,42 @@
       </form>
       <br>
     </section>
+
+    <!--*************************************************************************************-->
+    <!--TABLAS EN HTML-->
+    <!--*************************************************************************************-->
+
+    <section>
+      <h2>tablas en html</h2>
+      <p>Para esto se utiliza la etiqueta &lt;table&gt;&lt;/table&gt;. Para crear las filas se usa &lt;tr&gt;&lt;/tr&gt; y dentro de estas para añadir los datos se utiliza &lt;td&gt;&lt;/td&gt;. Cuando el dato de la tabla es un header o encabezado, se usa &lt;th&gt;&lt;/th&gt;.</p>
+
+      <p>Con CSS se edita el borde, color y demás características de la tabla</p>
+
+      <p>Con &lt;caption&gt;&lt;/caption&gt; se le agrega un texto descriptivo a la tabla. Siempre queda ubicado en la parte superior.</p>
+
+      <p>Con el atributo <i>colspan</i> de <i>td</i> se combinan celdas de una fila. <i>colspan = #</i> El # corresponde al número de columnas. Y lo mismo para las celdas de una columna pero con <i>rowspan</i>.</p>
+
+      <table>
+        <caption>Soy una tabla</caption>
+        <tr>
+          <th>Encabezado A</th>
+          <th>Encabezado B</th>
+        </tr>
+        <tr>
+          <td>Dato 1A</td>
+          <td>Dato 1B</td>
+        </tr>
+        <tr>
+          <td colspan="2">Dato 2A</td>
+          <td>Dato 2B</td>
+        </tr>
+        <tr>
+          <td>Dato 3A</td>
+          <td>Dato 3B</td>
+        </tr>
+      </table>
+    </section>
+    <br>
   </main>
 
   <footer>
