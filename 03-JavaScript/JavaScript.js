@@ -901,3 +901,33 @@ varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 //   console.log(varString[i]);
 // }
 
+
+// *******************************************************************************
+// DESTRUCTURACIÓN
+// *******************************************************************************
+
+// Sin destructuración
+
+const numeros = [1, 2, 3];
+
+let uno = numeros[0],
+  dos = numeros[1],
+  tres = numeros[2];
+
+console.log(uno, dos, tres);
+
+// Con destructuración
+
+const [one, two, three] = numeros;
+console.log(one, two, three);
+
+// Otro ejemplo con objetos
+
+let persona = {
+  firstName: "Anderson",
+  sureName: "Marín",
+  age: 33
+};
+
+let{firstName, sureName, age} = persona;  // Las variables se deben llamar igual que la propiedad de la que voy a destructurar los valores
+console.log(firstName, sureName, age);
