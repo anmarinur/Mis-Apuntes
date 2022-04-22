@@ -103,7 +103,7 @@ let letNumber = 30;
 // Métodos y funciones
 
 varNumber = 3;
-console.log(Number.isNaN(varNumber)); // Verifica si no es número
+// console.log(Number.isNaN(varNumber)); // Verifica si no es número
 
 // *******************************************************************************
 // OPERADORES 
@@ -536,8 +536,8 @@ const perro = {
   }
 }
 
-console.log(perro);
-perro.ladrar();
+// console.log(perro);
+// perro.ladrar();
 
 // Esto mismo se puede escribir de la siguiente forma. Cuando se quiere guardar un valor de una variable que tiene el mismo nombre de la 
 // propiedad, se escribe una sola vez y ya. Si se pone una propiedad que tiene un nombre diferente, ya se escribe normal.
@@ -550,8 +550,8 @@ const dog = {
   }
 }
 
-console.log(dog);
-dog.ladrar();
+// console.log(dog);
+// dog.ladrar();
 
 // MÉTODOS
 
@@ -834,6 +834,8 @@ function testSwitchVarios(letra) {
   }
 */
 
+// El incremento o decremeno no necesariamente tiene que ser i++ o i--. También puede ser i += 2, o i += 5, etc.
+
 function testFor(numero) {
   for (let i = 1; i <= numero; i++) {
     console.log(i);
@@ -968,3 +970,39 @@ let persona = {
 
 let{firstName, sureName, age} = persona;  // Las variables se deben llamar igual que la propiedad de la que voy a destructurar los valores
 // console.log(firstName, sureName, age);
+
+// *******************************************************************************
+// PARÁMETROS REST Y OPERADOR SPREAD
+// *******************************************************************************
+
+// Se usan mucho cuand se trabajan frameworks como react, angular, etc. Permiten agregar datos infinitos a una variable, función, etc.
+// Se crean poniendo tres puntos antes de la variable. Los valores que lleguen a esta variable son tomados como un arreglo
+
+function sumar(a, b, ...c) {
+  let resultado = a + b;
+
+  c.forEach(function(n){
+    resultado += n
+  });
+  return resultado;
+}
+
+// console.log(sumar(1, 2)); // No arroja error al no agregar valores a c ya que estos no son obligatorio ponerlos, a diferencia de a y b
+// console.log(sumar(1, 2, 3)); 
+// console.log(sumar(1, 2, 3, 4)); 
+// console.log(sumar(1, 2, 3, 4, 5)); 
+// console.log(sumar(1, 2, 3, 4, 5, 6)); 
+// console.log(sumar(1, 2, 3, 4, 5, 6, 7)); 
+
+// El operador Spread permite añadir datos a un arreglo sin estar haciendo cada rato push u otros métodos
+
+varString = [1, 2, 3, 4, 5];
+let varString2 = [6, 7, 8, 9, 0];
+
+console.log(varString, varString2);
+
+let varString3 = [varString, varString2];
+console.log(varString3);  // De esta forma lo que haría es crear un arreglo con dos arreglos
+
+varString3 = [...varString, ...varString2];
+console.log(varString3);  // De esta forma si se unen los dos arreglos
