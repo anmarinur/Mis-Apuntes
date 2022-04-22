@@ -2,6 +2,12 @@ body {
   font-family: 'Krub', sans-serif;
 }
 
+/* TÍTULOS */
+
+h2 {
+  margin-top: 40px;
+}
+
 /* MODIFICACIONES DE COLOR */
 
 #color-crimson {
@@ -22,6 +28,24 @@ body {
 #color-hsl {
   color: hsl(313, 82%, 56%);
   background-color: hsl(73, 82.1%, 56.1%);
+}
+
+/* ALINEACIONES DE TEXTO */
+
+#align-left {
+  text-align: left;
+}
+
+#align-center {
+  text-align: center;
+}
+
+#align-right {
+  text-align: right;
+}
+
+#align-justify {
+  text-align: justify;
 }
 
 span {
