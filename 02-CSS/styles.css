@@ -48,9 +48,33 @@ h2 {
   text-align: justify;
 }
 
+/* DECORACIONES DE TEXTO */
+
+#decor-overline {
+  text-decoration: overline;
+}
+
+#decor-through {
+  text-decoration: line-through;
+}
+
+#decor-underline {
+  text-decoration: underline;
+}
+
+#decor-mix {
+  text-decoration: overline underline;
+}
+
+
 span {
   color: blue;
   font-style: italic;
+}
+
+#nota {
+  color: red;
+  font-style: normal;
 }
 
 .explicacion {
