@@ -1,11 +1,30 @@
 body {
   font-family: 'Krub', sans-serif;
+  font-weight: 300;
+  background-color: #06113C;
+  color: white;
 }
 
 /* TÍTULOS */
 
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#C {
+  color: yellow;
+}
+#S {
+  color: blue;
+}
+#S2 {
+  color: red;
+}
+
 h2 {
   margin-top: 40px;
+  font-weight: 700;
 }
 
 /* MODIFICACIONES DE COLOR */
