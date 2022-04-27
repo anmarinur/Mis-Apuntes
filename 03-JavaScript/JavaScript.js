@@ -1017,10 +1017,22 @@ function sumar(a, b, ...c) {
 varString = [1, 2, 3, 4, 5];
 let varString2 = [6, 7, 8, 9, 0];
 
-console.log(varString, varString2);
+// console.log(varString, varString2);
 
 let varString3 = [varString, varString2];
-console.log(varString3);  // De esta forma lo que haría es crear un arreglo con dos arreglos
+// console.log(varString3);  // De esta forma lo que haría es crear un arreglo con dos arreglos
 
 varString3 = [...varString, ...varString2];
-console.log(varString3);  // De esta forma si se unen los dos arreglos
+// console.log(varString3);  // De esta forma si se unen los dos arreglos
+
+// *******************************************************************************
+// ARROW FUNCTIONS
+// *******************************************************************************
+
+// Aplica para funciones expresadas o anónimas
+
+const saludar = function() {
+  console.log("hola");
+}
+
+saludar();
