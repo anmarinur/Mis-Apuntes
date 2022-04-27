@@ -183,6 +183,24 @@ i /= 5;
 // console.log(8 < 9 || 9 < 8);
 // console.log(8 < 9 && 8 <= 8); 
 
+// Funciones
+
+// Math.random se usa para generar números aleatorios entre 0 y 1 sin incluir el 1
+Math.random();
+// console.log(Math.random());
+
+// Math.round aproxima al valor entero más cercano
+Math.round(2.9);
+// console.log(Math.round(2.9));
+
+// Math.floor aproxima al número entero más cercano por debajo
+Math.floor(2.9);
+// console.log(Math.floor(2.9));
+
+// Math.ceil redondea al valor entero más cercano por encima
+Math.ceil(2.2);
+// console.log(Math.ceil(2.2));
+
 
 // *******************************************************************************
 // STRINGS
