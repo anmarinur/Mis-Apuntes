@@ -4,6 +4,8 @@
 
 ? GUÍA PARA LOS COMENTARIOS
 
+* Instalar la extensión Better Comments para que los reconozca:
+
 * Texto
 ! Notas importantes
 ? Subtítulos
@@ -14,9 +16,12 @@ TODO
 // TODO: Para nombrar los archivos como buena práctica se les nombra con el snake_case
 // Ej: mi_archivo_javascript.js
 
+
+
 // ? *******************************************************************************
 // ? * VARIABLES Y TIPOS DE DATOS
 // ? *******************************************************************************
+
 
 // * Una variable puede tomar los 8 tipos de datos. 
 // * El nombre de una variable puede contener letras, números y ($) o (_) 
@@ -44,7 +49,6 @@ const UNA_CONSTANTE = "Soy una constante";
 
 var varNumber2 = 20;
 var varNumber2 = 55;
-// console.log(varNumber2);
 
 /* 
 * Cuando el código es pequeño, esto no representa un problema, pero entre más grande más son las probabilidades de que se sobrescriba por accidente. Para eso el ES6 (ECMAScript 6) introdujo la keyword let, así si se quiere sobreescribir, esto arrojaría error:
@@ -72,16 +76,10 @@ let letNumber = 30;
 // * Si no se define inicialmente la variable, esta tiene un valor undefined 
 
 let varUndefined;
-// console.log(varUndefined);
 
 // * Si se realiza una operación con un valor undefined, voy a tener un resultado NaN (Not a Number)
 // * NaN también se obtiene cuando se realizan operaciones con otros datos diferentes a un número
-
-//console.log(5 + varUndefined);
-
 // * Si se suma un undefined con un string, su resultado va a ser un string 'undefined'
-
-//console.log('hola ' + varUndefined);
 
 let varNull = null; // * La diferencia con undefined es que el null es intencional
 let varBoolean = true;
@@ -103,19 +101,18 @@ let varObject = {};
 // * Para crear un tipo Symbol se hace de la siguiente forma:
 
 let varSymbol = Symbol("varSymbol");
-// console.log(varSymbol);
 
 // * Incluso si creo otro symbol del mismo valor, no va a ser igual al anterior
 
 let varSymbol2 = Symbol("varSymbol");
 
 // * varSymbol === varSymbol2 es false
-// console.log(varSymbol === varSymbol2);
 
 
 // ? DATOS TIPO NUMBER
 
 varNumber = 3;
+
 
 // ? SCOPE
 
@@ -152,24 +149,22 @@ function myFun() {
 
 // * Se usa para generar números aleatorios entre 0 y 1 sin incluir el 1
 // TODO: Math.random();
-// console.log(Math.random());
 
 // * Aproxima al valor entero más cercano
 // TODO: Math.round(2.9);
-// console.log(Math.round(2.9));
 
 // * Aproxima al número entero más cercano por debajo
 // TODO: Math.floor(2.9);
-// console.log(Math.floor(2.9));
 
 // * Redondea al valor entero más cercano por encima
 // TODO: Math.ceil(2.2);
-// console.log(Math.ceil(2.2));
+
 
 
 // ? *******************************************************************************
 // ? OPERADORES 
 // ? *******************************************************************************
+
 
 /*
 * + Suma
@@ -218,12 +213,6 @@ i /= 5;
 * De igual forma que (==) comparan valores así sean de distintos tipos de datos como: "3" < 5 lo que sería true
 */
 
-// console.log(9 > 8); // True
-// console.log(9 < 8); // False
-// console.log(9 <= 8);  // False
-// console.log(9 >= 8);  // True
-
-
 // * (=)
 // * Un igual es asignación de lo de la derecha a lo que está a la izquierda
 
@@ -252,14 +241,12 @@ i /= 5;
 * (&&) AND
 */
 
-// console.log(!false);
-// console.log(8 < 9 || 9 < 8);
-// console.log(8 < 9 && 8 <= 8); 
 
 
 // ? *******************************************************************************
 // ? STRINGS
 // ? *******************************************************************************
+
 
 // * Se definen con las comillas dobles o sencillas, JS acepta cualquiera de las dos, siempre y cuando se empiece y se termine con las misma:
 
@@ -275,12 +262,10 @@ i /= 5;
 let nombre = "Anderson";
 let apellido = "Marín"
 varString = `Mi nombre es ${nombre} ${apellido}`;
-// console.log(varString);
 
 // * Si se quiere poner (') o (") dentro del string se usa poniendo el backslash antes de las comillas
 
 varString = "Soy un \"String\".";
-// console.log(varString);
 
 // * El backslash (\) no solamente se usa para poner comillas dentro de otras comillas. También se usan con otros caracteres:
 
@@ -316,9 +301,11 @@ varString = miNombre[0];
 // * Los datos individuales de un string son inmutables, es decir, una vez creados no se pueden editar
 
 
+
 // ? *******************************************************************************
 // ? ARRAYS
 // ? *******************************************************************************
+
 
 // * Sirven para almacenar varios datos
 
@@ -332,13 +319,11 @@ varArray = [["Uno", 1], ["dos", 2]];
 
 varArray = ["uno", "dos", "tres", "cuatro"];
 varArray[1];
-//console.log(varArray[1]);
 
 // * A diferencia de los strings, en los arrays si se pueden modificar los datos incluso si se declaró como constante
 
-const constArray = [25, 15, 30];
-constArray[0] = 50;
-// console.log(constArray);
+const CONST_ARRAY = [25, 15, 30];
+CONST_ARRAY[0] = 50;
 
 // * Una forma para acceder a los datos de un multidimensional array es con el sistema de brackets
 
@@ -349,9 +334,9 @@ varArray = [
   [[10, 11, 12], 13, 14]
 ];
 
-// console.log(varArray[3]); // * Va a ser igual a [[10, 11, 12], 13, 14]
-// console.log(varArray[3][0]); // * Va a ser igual a [10, 11, 12]
-// console.log(varArray[3][0][1]); // * Va a ser igual a 11
+varArray[3]; // * Va a ser igual a [[10, 11, 12], 13, 14]
+varArray[3][0]; // * Va a ser igual a [10, 11, 12]
+varArray[3][0][1]; // * Va a ser igual a 11
 
 // * Una forma de añadir elementos a un array es con la función .push() la cual añade el o los elementos al final del array y entrega el array resultante
 
@@ -374,8 +359,6 @@ varArray = [
 // * Para agregar un valor en la primer posición del array
 // TODO: .unshift();
 
-varArray.unshift(50, 100);
-
 // * Permite crear un arreglo
 // TODO: Array.of("a", "b", 1, 2);
 
@@ -383,9 +366,11 @@ varArray.unshift(50, 100);
 // TODO: Array().fill();
 
 
+
 // ? *******************************************************************************
 // ? FUNCTIONS
 // ? *******************************************************************************
+
 
 // * Es código reutilizable:
 
@@ -401,6 +386,10 @@ function Saludo() {
 function funcionDeclarada() {
   console.log("Soy una función declarada");
 }
+
+// ? FUNCIÓN EXPRESADA
+
+// ! En este tipo de funciones si se invoca antes de ser expresada, JavaScript va a arrojar un error
 
 let varFunction = function() {
   console.log("Soy una función expresada");
@@ -434,7 +423,6 @@ function plusThree(num) {
 }
 
 const answer = plusThree(5);
-// console.log(answer);
 
 // ! NOTA: Se debe tener en cuenta que la función se ejecuta hasta el return, de ahí en adelante no lo tendría en cuenta
 
@@ -447,7 +435,7 @@ function otraFuncion() {
 
 // * otraFuncion();
 
-// Las funciones no necesariamente deben usar el return. Este solo se usa si se quiere retornar algún dato
+// * Las funciones no necesariamente deben usar el return. Este solo se usa si se quiere retornar algún dato
 
 let sum = 0;
 
@@ -457,47 +445,30 @@ function addSum(num) {
 
 addSum(3);
 
-// console.log(sum);
+// * También es posible asignar a una variable el valor retornado de una función
 
-// También es posible asignar a una variable el valor retornado de una función
-
-// Tomando la función creada en líneas arriba plusThree(num);
+// * Tomando la función creada en líneas arriba plusThree(num);
 
 varNumber = 0;
 varNumber = plusThree(5);
-// console.log(varNumber);
 
-// La función y la invocación de esta función pueden ir en cualquier posición ya que JavaScript lo que
-// hace es organizar primero las variables y funciones
+// * La función (declarada) y la invocación de esta función pueden ir en cualquier posición ya que JavaScript lo que hace es organizar primero las variables y funciones. 
 
-// HolaMundo();
+// * HolaMundo();
 
 function HolaMundo() {
   console.log("Hola Mundo");
 }
 
-// Funciones expresadas (funciones anónimas)
 
-// Es una función que se le a asignado a una variable
-
-const funcionExpresada = function() {
-  console.log("Esto es una función expresada");
-}
-
-// En este tipo de funciones si se invoca antes de ser expresada, JavaScript va a arrojar un error
+// ? *******************************************************************************
+// ? OBJETOS
+// ? *******************************************************************************
 
 
-// *******************************************************************************
-// OBJETOS
-// *******************************************************************************
-
-// A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa.
-// Se definen usando las llaves { }. Aquello que contienen los objetos son las propiedades y estas no tienen un índice como los arrays.
-// La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto mismo. Cuando esta información es una función, 
-// ya no se llama atributo sino método:
+// * A diferencia de los array que contienen mucha información relacionada entre sí, los objetos contienen mucha información sobre una sola cosa. Se definen usando las llaves { }. Aquello que contienen los objetos son las propiedades y estas no tienen un índice como los arrays. La información que puede contener un objeto puede ser de cualquier tipo, incluso un objteto mismo. Cuando esta información es una función, ya no se llama atributo sino método:
 
 const ObjetoNuevo = {};
-// console.log(ObjetoNuevo);
 
 const Anderson = {
   nombre: "Anderson",
@@ -516,36 +487,23 @@ const Anderson = {
     console.log(`Este es mi nick @${this.contacto.nick[0]}`);
   }
 }
-// console.log(Anderson);
 
-// Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se está accediendo a una propiedad
-// con el método de llaves, la propiedad debe ir entre comillas. Esta se usa también cuando el nombre de la propiedad tiene espacios.
-// Cuando es una variable, se debe usar el método de llaves y no se ponen ""
-// Cuando se va a acceder a una función se le debe poner paréntesis al final del nombre
+// * Para acceder a la información dentro del objeto se pueden usar dos métodos con ([]) o (.). Cuando se está accediendo a una propiedad con el método de llaves, la propiedad debe ir entre comillas. Esta se usa también cuando el nombre de la propiedad tiene espacios. Cuando es una variable, se debe usar el método de llaves y no se ponen "". Cuando se va a acceder a una función se le debe poner paréntesis al final del nombre
 
-// console.log(Anderson["contacto"]);  // No tan usada
-// varNombre = nombre;
-// console.log(Anderson[varNombre]);
-// console.log(Anderson.apellido);
-// console.log(Anderson.pasatiempos[1]);
-// console.log(Anderson.contacto.nick[0]);
-// Anderson.saludar();
-// Anderson.imprimir();
-
-// Se pueden actualizar los valores de las variables que tiene un objeto, llamando a la propiedad con cualquier método . o []
-// y luego = y el nuevo valor
+// * Se pueden actualizar los valores de las variables que tiene un objeto, llamando a la propiedad con cualquier método (.) o ([]) y luego (=) y el nuevo valor
 
 Anderson.apellido = ["Marín", "Uribe"];
 
-// También se pueden agregar nuevas propiedades utilizando cualquier método y poniendo el nombre de la nueva propiedad y el valor
+// * También se pueden agregar nuevas propiedades utilizando cualquier método y poniendo el nombre de la nueva propiedad y el valor
 
 Anderson.heroFan = "Spidey";
 
-// Para eliminar propiedades se pone delete y luego se llama a la propiedad que se quiera eliminar
+// * Para eliminar propiedades se pone delete y luego se llama a la propiedad que se quiera eliminar
 
 delete Anderson.pasatiempos;
 
-// OBJETOS LITERALES
+
+// ? OBJETOS LITERALES
 
 nombre = "Dasha";
 edad = 5;
@@ -558,69 +516,51 @@ const perro = {
   }
 }
 
-// console.log(perro);
-// perro.ladrar();
-
-// Esto mismo se puede escribir de la siguiente forma. Cuando se quiere guardar un valor de una variable que tiene el mismo nombre de la 
-// propiedad, se escribe una sola vez y ya. Si se pone una propiedad que tiene un nombre diferente, ya se escribe normal.
+// * Esto mismo se puede escribir de la siguiente forma. Cuando se quiere guardar un valor de una variable que tiene el mismo nombre de la propiedad, se escribe una sola vez y ya. Si se pone una propiedad que tiene un nombre diferente, ya se escribe normal.
 
 const dog = {
   nombre,
   edad,
-  ladrar() {  // Este es la nueva forma para escribir los métodos
+  ladrar() {  // * Este es la nueva forma para escribir los métodos
     console.log("guau guau");
   }
 }
 
-// console.log(dog);
-// dog.ladrar();
 
-// MÉTODOS
+// ? MÉTODOS PARA LOS OBJETOS
 
 // Con el método .keys que es un objeto global se crea un arreglo iterable con todos las claves (keys) del objeto
-varString = Object.keys(Anderson);
-// console.log(varString); 
+// TODO: varString = Object.keys(Anderson);
 
 // Con el método .values que es un objeto global se crea un arreglo iterable con todos los valores (values) del objeto
-varString = Object.values(Anderson);
-// console.log(varString);
+// TODO: varString = Object.values(Anderson);
 
 // Con este método puedo saber si un objeto tiene una propiedad
-varBoolean = Anderson.hasOwnProperty("nombre");
-// console.log(varBoolean);
-
-varBoolean = Anderson.hasOwnProperty("date");
-// console.log(varBoolean);
+// TODO: varBoolean = Anderson.hasOwnProperty("nombre");
 
 
-// *******************************************************************************
-// CONDICIONALES
-// *******************************************************************************
 
-// IF, ELSE IF, ELSE
-// El if es usado para tomar decisiones en el código. Si la condición es verdadera (true) se va a ejecutar lo que esté entre las 
-// llaves (curly braces).
+// ? *******************************************************************************
+// ? CONDICIONALES
+// ? *******************************************************************************
+
+
+// ? IF, ELSE IF, ELSE
+
+// * El if es usado para tomar decisiones en el código. Si la condición es verdadera (true) se va a ejecutar lo que esté entre las llaves (curly braces).
 
 /* 
-  La estructura de un if es así:
+*  La estructura de un if es así:
 
   if (condición) {
     código a ejecutar;
   }
 */
 
-function test (myCondition) {
-  if (myCondition) {
-    console.log("It was true");
-  }
-}
 
-// test(true);
-// test(false);
+// ? ELSE
 
-// ELSE
-
-// Es usado para poder ejecutar una función cuando la condición del if es falsa
+// * Es usado para poder ejecutar una función cuando la condición del if es falsa
 
 /* 
   if (condición) {
@@ -630,20 +570,10 @@ function test (myCondition) {
   }
 */
 
-function testElse(numero) {
-  if(numero > 10) {
-    console.log("El número es mayor que 10");
-  } else {
-    console.log("El número es menor o igual a 10")
-  }
-}
 
-// testElse(5);
-// testElse(15);
+// ? ELSE IF
 
-// ELSE IF
-
-// Esta declaración se usa cuando se tienen múltiples combinaciones
+// * Esta declaración se usa cuando se tienen múltiples combinaciones
 
 /*
   if (condición 1) {
@@ -657,26 +587,10 @@ function testElse(numero) {
   }
 */
 
-function testElseIf(numero) {
-  if(numero > 10) {
-    console.log("El número es mayor que 10");
-  } else if (numero === 10) {
-    console.log("El número es igual a 10")
-  } else {
-    console.log("El número es menor que 10");
-  }
-}
 
-// testElseIf(5);
-// testElseIf(10);
-// testElseIf(15);
+// ! NOTA: Cuando hay múltiples condiciones estas se evalúan de arriba hacia abajo. Por esto se debe ser muy cuidadoso a la hora de ubicar las condiciones, ya que se pueden tener resultados no esperados
 
-// NOTA
-// Cuando hay múltiples condiciones estas se evalúan de arriba hacia abajo. Por esto se debe ser muy cuidadoso a la hora de ubicar las 
-// condiciones, ya que se pueden tener resultados no esperados
-
-// Dentro de una función se puede poner el if como se ha hecho anteriormente, pero también se puede poner directamente en el return de
-// función la comparación y este regresará un valor booleano dependiendo de la condición
+// * Dentro de una función se puede poner el if como se ha hecho anteriormente, pero también se puede poner directamente en el return de función la comparación y este regresará un valor booleano dependiendo de la condición
 
 // console.log(1 === 3);
 // console.log(2 === 2);
@@ -698,11 +612,13 @@ function testElseIf(numero) {
 */
 
 
-// *******************************************************************************
-// SWITCH, CASE, BREAK
-// *******************************************************************************
 
-// Switch se usa cuando se tienen múltiples opciones para elegir una dependiendo de una condición
+// ? *******************************************************************************
+// ? SWITCH, CASE, BREAK
+// ? *******************************************************************************
+
+
+// * Switch se usa cuando se tienen múltiples opciones para elegir una dependiendo de una condición
 
 /*
   switch(condición) {
@@ -715,25 +631,9 @@ function testElseIf(numero) {
   }
 */
 
-// Case evalúa con la igualdad estricta "===". El break le dice a JavaScript que detenga la ejecuión de las demás expresiones
-// Si se omite el break, entonces se ejecuta la siguiente declaración
+// * Case evalúa con la igualdad estricta "===". El break le dice a JavaScript que detenga la ejecuión de las demás expresiones. Si se omite el break, entonces se ejecuta la siguiente declaración
 
-function testSwitch(letra) {
-  switch(letra) {
-    case "a":
-      console.log("A");
-      break;
-    case "b":
-      console.log("B");
-      break;
-  }
-}
-
-// testSwitch("a");
-// testSwitch("b");
-
-// No todas las veces se van a conocer todos los casos posibles, es por esto que se debe definir un valor para cuando no se 
-// ejecute ningún caso. Es muy parecido al else que se pone al final cuando se usan else if
+// * No todas las veces se van a conocer todos los casos posibles, es por esto que se debe definir un valor para cuando no se ejecute ningún caso. Es muy parecido al else que se pone al final cuando se usan else if
 
 /*
   switch(condición) {
@@ -749,53 +649,9 @@ function testSwitch(letra) {
   }
 */
 
-function testSwitchDefault(letra) {
-  switch(letra) {
-    case "a":
-      console.log("A");
-      break;
-    case "b":
-      console.log("B");
-      break;
-    default:
-      console.log("Otra letra");
-      break;
-  }
-}
+// * Si no se definen algunos casos, el código se va a seguir ejecutando hasta que encuentre un break 
 
-// testSwitchDefault("a");
-// testSwitchDefault("c");
-
-// Si no se definen algunos casos, el código se va a seguir ejecutando hasta que encuentre un break 
-function testSwitchVarios(letra) {
-  switch(letra) {
-    case "a":
-    case "b":
-    case "c":
-      console.log("A - C");
-      break;
-    case "d":
-    case "e":
-    case "f":
-      console.log("D - F"); // Aquí como no hay break, entonces ejecuta también el siguiente y se detiene ahí porque si hay un brake
-    case "g":
-      console.log("G");
-      break;
-    default:
-      console.log("Otras letras");
-      break;
-  }
-}
-
-// testSwitchVarios("a");
-// testSwitchVarios("b");
-// testSwitchVarios("c");
-// testSwitchVarios("d");
-// testSwitchVarios("e");
-// testSwitchVarios("f");
-// testSwitchVarios("g");
-
-// Cuando se tienen varios if/else if, estos se pueden reemplazar por switch con sus respectivos case
+// * Cuando se tienen varios if/else if, estos se pueden reemplazar por switch con sus respectivos case
 
 /* 
   if (val === 1) {
@@ -820,16 +676,20 @@ function testSwitchVarios(letra) {
   } 
 */
 
-// *******************************************************************************
-// CICLOS
-// *******************************************************************************
 
-// Con los ciclos se debe tener mucho cuidado, ya que si se plantea mal se pueden generar bucles infinitos
 
-// WHILE (Ya no se usa mucho)
-// Evalúa la condición y luego ejecuta el código
+// ? *******************************************************************************
+// ? CICLOS
+// ? *******************************************************************************
 
-// Iteración: cada ciclo
+
+// * Con los ciclos se debe tener mucho cuidado, ya que si se plantea mal se pueden generar bucles infinitos
+
+
+// ? WHILE (Ya no se usa mucho)
+
+// * Evalúa la condición y luego ejecuta el código
+// * Iteración: cada ciclo
 
 /* 
   while(condición) {
@@ -838,8 +698,10 @@ function testSwitchVarios(letra) {
   }
 */
 
-// DO WHILE (Ya no se usa mucho)
-// Ejecuta el código y luego evalúa la condición
+
+// ? DO WHILE (Ya no se usa mucho)
+
+// * Ejecuta el código y luego evalúa la condición
 
 /*
   do {
@@ -848,7 +710,7 @@ function testSwitchVarios(letra) {
   } while (condición)
 */
 
-// FOR 
+// ? FOR 
 
 /*
   for (declaración de la variable; condición; incremento o decremento) {
@@ -856,29 +718,15 @@ function testSwitchVarios(letra) {
   }
 */
 
-// El incremento o decremeno no necesariamente tiene que ser i++ o i--. También puede ser i += 2, o i += 5, etc.
+// * El incremento o decremeno no necesariamente tiene que ser i++ o i--. También puede ser i += 2, o i += 5, etc.
 
-function testFor(numero) {
-  for (let i = 1; i <= numero; i++) {
-    console.log(i);
-  }
-}
+// * Este tipo de ciclos se usas para recorrer un arreglo
 
-// testFor(6);
+// * Despues de JS 6 hay dos tipos de for:
 
-// Este tipo de ciclos se usas para recorrer un arreglo
+// ? FOR IN 
 
-function testForArray(arreglo) {
-  for (let i = 0; i < arreglo.length; i++) {
-    console.log(arreglo[i]);
-  }
-}
-
-// testForArray([1, 2, 3, 4 , 5]);
-
-// Despues de JS 6 hay dos tipos de for:
-
-// FOR IN que es para hacer iteraciones con las propiedades de un objeto
+// * Es para hacer iteraciones con las propiedades de un objeto
 
 /* 
 for (variable in objeto) {
@@ -886,88 +734,70 @@ for (variable in objeto) {
 } 
 */
 
-function forIn() {
-  for (let propiedad in Anderson) {
-    console.log(`Key: ${propiedad}, Valor: ${Anderson[propiedad]}`);
+// ? FOR OF 
+// * Es utilizado para hacer iteracioens sobre cualquier elemento iterable en JavaScript
+
+/* 
+for (variable of objeto-iterable) {
+  código a ejecutar;
+} 
+*/
+
+
+
+// ? *******************************************************************************
+// ? MANEJO DE ERRORES
+// ? *******************************************************************************
+
+// * Método usado para evaluar una porción del código e identificar errores
+
+/*
+try{
+  console.log("En try se pone el código a evaluar");
+  noExiste; // Esta variable no existe y por lo tanto salta a catch. No saltan errores porque este código maneja el error
+  console.log("Segundo mensaje de prueba"); // Esta línea no la lee porque el error estuvo antes y saltó al catch
+  } catch (error){
+    console.log("Catch captura cualquier error surgido o lanzado desde el try") // Como hubo un error entonces entró al catch
+    console.log(error); // Se manda a imprimir el error para ver que falló
+  } finally {  // Es más usado en back end
+    console.log("El bloque finally se ejecutará siempre al final de un bloque try-catch")
   }
-}
-
-// forIn();
-
-// FOR OF es utilizado para hacer iteracioens sobre cualquier elemento iterable en JavaScript
-
-varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function forOf() {
-  for (let item of varString) {
-    console.log(`${item}`);
-  }
-}
-
-// forOf();
+*/
 
 
-// *******************************************************************************
-// MANEJO DE ERRORES
-// *******************************************************************************
+// ? *******************************************************************************
+// ? BREAK - CONTINUE
+// ? *******************************************************************************
 
-// Método usado para evaluar una porción del código e identificar errores
-
-// try{
-//   console.log("En try se pone el código a evaluar");
-//   noExiste; // Esta variable no existe y por lo tanto salta a catch. No saltan errores porque este código maneja el error
-//   console.log("Segundo mensaje de prueba"); // Esta línea no la lee porque el error estuvo antes y saltó al catch
-// } catch (error){
-//   console.log("Catch captura cualquier error surgido o lanzado desde el try") // Como hubo un error entonces entró al catch
-//   console.log(error); // Se manda a imprimir el error para ver que falló
-// } finally {  // Es más usado en back end
-//   console.log("El bloque finally se ejecutará siempre al final de un bloque try-catch")
-// }
-
-// Ejemplo:
-
-// try {
-//   // let numero = 10;
-//   let numero = "diez";
-
-//   if (isNaN(numero)) {
-//     throw new Error("El caracter introducido no es un número");
-//   }
-
-//   console.log(numero * numero);
-// } catch (error) {
-//   console.log(`Se produjo el siguiente error ${error}`);
-// }
-
-// *******************************************************************************
-// BREAK - CONTINUE
-// *******************************************************************************
-
-// Estos métodos solo se pueden usar en funciones de control como los if, for, etc. No se pueden usar en métodos para objetos
-// El break saca de la estructura en donde se encuentre. Va hasta la función padre y rompe el ciclo
-// Continue hace que se salte el código de la iteración en donde se llamó esta función
+// * Estos métodos solo se pueden usar en funciones de control como los if, for, etc. No se pueden usar en métodos para objetos. El break saca de la estructura en donde se encuentre. Va hasta la función padre y rompe el ciclo. Continue hace que se salte el código de la iteración en donde se llamó esta función
 
 varString = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-// for (let i = 0; i < varString.length; i++) {
-//   if (i === 5) {
-//     break;
-//   }
-//   console.log(varString[i]);
-// }
+/*
+for (let i = 0; i < varString.length; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log(varString[i]);
+}
+*/
 
-// for (let i = 0; i < varString.length; i++) {
-//   if (i === 5) {
-//     continue;
-//   }
-//   console.log(varString[i]);
-// }
+/*
+for (let i = 0; i < varString.length; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(varString[i]);
+}
+*/
 
 
-// *******************************************************************************
-// DESTRUCTURACIÓN
-// *******************************************************************************
 
-// Sin destructuración
+// ? *******************************************************************************
+// ? DESTRUCTURACIÓN
+// ? *******************************************************************************
+
+// * Sin destructuración
 
 const numeros = [1, 2, 3];
 
@@ -975,12 +805,9 @@ let uno = numeros[0],
   dos = numeros[1],
   tres = numeros[2];
 
-// console.log(uno, dos, tres);
-
-// Con destructuración
+// * Con destructuración
 
 const [one, two, three] = numeros;
-// console.log(one, two, three);
 
 // Otro ejemplo con objetos
 
@@ -991,14 +818,15 @@ let persona = {
 };
 
 let{firstName, sureName, age} = persona;  // Las variables se deben llamar igual que la propiedad de la que voy a destructurar los valores
-// console.log(firstName, sureName, age);
 
-// *******************************************************************************
-// PARÁMETROS REST Y OPERADOR SPREAD
-// *******************************************************************************
 
-// ! Se usan mucho cuand se trabajan frameworks como react, angular, etc. Permiten agregar datos infinitos a una variable, función, etc.
-// Se crean poniendo tres puntos antes de la variable. Los valores que lleguen a esta variable son tomados como un arreglo
+
+// ? *******************************************************************************
+// ? PARÁMETROS REST Y OPERADOR SPREAD
+// ? *******************************************************************************
+
+// * Se usan mucho cuand se trabajan frameworks como react, angular, etc. Permiten agregar datos infinitos a una variable, función, etc.
+// * Se crean poniendo tres puntos antes de la variable. Los valores que lleguen a esta variable son tomados como un arreglo
 
 function sumar(a, b, ...c) {
   let resultado = a + b;
@@ -1009,31 +837,22 @@ function sumar(a, b, ...c) {
   return resultado;
 }
 
-// console.log(sumar(1, 2)); // No arroja error al no agregar valores a c ya que estos no son obligatorio ponerlos, a diferencia de a y b
-// console.log(sumar(1, 2, 3)); 
-// console.log(sumar(1, 2, 3, 4)); 
-// console.log(sumar(1, 2, 3, 4, 5)); 
-// console.log(sumar(1, 2, 3, 4, 5, 6)); 
-// console.log(sumar(1, 2, 3, 4, 5, 6, 7)); 
-
-// El operador Spread permite añadir datos a un arreglo sin estar haciendo cada rato push u otros métodos
+// * El operador Spread permite añadir datos a un arreglo sin estar haciendo cada rato push u otros métodos
 
 varString = [1, 2, 3, 4, 5];
 let varString2 = [6, 7, 8, 9, 0];
 
-// console.log(varString, varString2);
-
 let varString3 = [varString, varString2];
-// console.log(varString3);  // De esta forma lo que haría es crear un arreglo con dos arreglos
 
 varString3 = [...varString, ...varString2];
-// console.log(varString3);  // De esta forma si se unen los dos arreglos
 
-// *******************************************************************************
-// ARROW FUNCTIONS
-// *******************************************************************************
 
-// Aplica para funciones expresadas o anónimas
+
+// ? *******************************************************************************
+// ? ARROW FUNCTIONS
+// ? *******************************************************************************
+
+// * Aplica para funciones expresadas o anónimas
 
 const saludar = function() {
   console.log("hola");
