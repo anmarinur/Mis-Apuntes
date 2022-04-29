@@ -179,7 +179,7 @@ O para agregar a un texto el link se usan llaves y el link entre paréntesis:
 - **git commit -m ‘#’**: en done # puede tomar cualquier texto que represente el cambio o la actualización realizada. Aquellos archivos untracked (sin seguimiento) pasan a tracked. Y los archivos modificados quedan con un nombre con la versión actual. Confirma los cambios.
 - **git push**: para subir el archivo a github
 - **git clone direccion-url-repositorio**: para clonar un repositorio que se encuentre en GIT
-- **git init**: Se utiliza cuando se tiene una carpeta y se quiere iniciar un repositorio con ella. Este inicia el repositorio de manera local, pero aún no está en la nube. Después se deben añadir los archivos con _"git add ."_ . Ya quedaron los cambios confirmados de forma local, ahora se debe subir a la nube con el _git remote add orign url-del-repositorio-creado-en-github_
+- **git init**: Se utiliza cuando se tiene una carpeta y se quiere iniciar un repositorio con ella. Este inicia el repositorio de manera local, pero aún no está en la nube. Después se deben añadir los archivos con _"git add ."_ . Ya quedaron los cambios confirmados de forma local, ahora se debe subir a la nube con el _git remote add orign url-del-repositorio-creado-en-github_ . Después se hace _git branch -M main_ y luego push con _git push -u origin main_
 - **git remote add orign url-del-repositorio-creado-en-github**: para subir el repositorio local a github, relacionando el local con la nube
 
 
