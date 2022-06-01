@@ -37,3 +37,18 @@ newDiv.innerText = "Soy un párrafo";          // Le agrego un texto al párrafo
 let div = document.querySelector("div")       // Guardo el div en una variable
 div.append(newDiv);
 ```
+
+Para decirle a un elemento que observe si ocurre algún evento se usa `target.addEventListener(evento, reacción)`
+
+```js
+newDiv.addEventListener('click', (e)=> console.log(e));
+```
+
+El evento no solo hace referencia al click, sino que también contiene mucha información. Entre esa el `target` que es el elemento que se estaba observando. Para acceder a ese target, como es un valor del objeto `event` entonces se usa `event.target`. Y así sucesivamente como demás elementos dentro de cada uno, por ejemplo style: `event.target.style.background = 'green';`
+
+```js
+newDiv.addEventListener('click', function (event) {
+  console.log(event);
+  event.target.style.background = 'green';  // Cada vez que se de click en newDiv, este va a cambiar a color verde.
+});
+```
