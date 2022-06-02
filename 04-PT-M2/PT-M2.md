@@ -44,7 +44,7 @@ Para decirle a un elemento que observe si ocurre algún evento se usa `target.ad
 newDiv.addEventListener('click', (e)=> console.log(e));
 ```
 
-El evento no solo hace referencia al click, sino que también contiene mucha información. Entre esa el `target` que es el elemento que se estaba observando. Para acceder a ese target, como es un valor del objeto `event` entonces se usa `event.target`. Y así sucesivamente como demás elementos dentro de cada uno, por ejemplo style: `event.target.style.background = 'green';`
+El evento no solo hace referencia al click, sino que también contiene mucha información. Entre esa el `target` que es el elemento que se estaba observando. Para acceder a ese target, como es un valor del objeto `event` entonces se usa `event.target`. Y así sucesivamente con demás elementos dentro de cada uno, por ejemplo style: `event.target.style.background = 'green';`
 
 ```js
 newDiv.addEventListener('click', function (event) {
